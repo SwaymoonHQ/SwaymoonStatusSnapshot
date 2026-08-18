@@ -3,7 +3,8 @@
   if (!cfg.SNAPSHOT_MODE) return;
 
   function loadJson(path) {
-    return fetch(path, { cache: 'no-store', credentials: 'omit' }).then(function (res) {
+    var bust = path + (path.indexOf('?') >= 0 ? '&' : '?') + 't=' + Date.now();
+    return fetch(bust, { cache: 'no-store', credentials: 'omit' }).then(function (res) {
       return res.json().then(function (data) {
         if (!res.ok) {
           var err = new Error((data && data.error) || res.statusText);

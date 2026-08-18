@@ -24,7 +24,7 @@
       var slot = document.getElementById(slotId || 'snapshot-banner-slot');
       if (!slot) return Promise.resolve();
       var live = (cfg.LIVE_ORIGIN || 'https://status.swaymoon.com').replace(/\/$/, '');
-      return fetch('/data/meta.json', { cache: 'no-store' }).then(function (res) { return res.json(); }).then(function (meta) {
+      return fetch('/data/meta.json?t=' + Date.now(), { cache: 'no-store' }).then(function (res) { return res.json(); }).then(function (meta) {
         var stale = !!meta.stale;
         var when = fmtTime(meta.generatedAt);
         slot.innerHTML =
