@@ -24,14 +24,17 @@
       var slot = document.getElementById(slotId || 'snapshot-banner-slot');
       if (!slot) return Promise.resolve();
       var live = (cfg.LIVE_ORIGIN || 'https://status.swaymoon.com').replace(/\/$/, '');
-      return fetch('/data/meta.json?t=' + Date.now(), { cache: 'no-store' }).then(function (res) { return res.json(); }).then(function (meta) {
-        var stale = !!meta.stale;
+      var bucket = Math.floor(Date.now() / 300000);
+      return fetch('/data/meta.json?v=' + bucket, { cache: 'no-store' }).then(function (res) { return res.json(); }).then(function (meta) {
+        var down = !!meta.originUnreachable;
+        var stale = !down && !!meta.stale;
         var when = fmtTime(meta.generatedAt);
+        var extra = down ? t('snapshot.originDown') : (stale ? t('snapshot.stale') : '');
         slot.innerHTML =
-          '<aside class="status-snapshot-banner' + (stale ? ' is-stale' : '') + '" role="note">' +
+          '<aside class="status-snapshot-banner' + (down ? ' is-down' : (stale ? ' is-stale' : '')) + '" role="note">' +
           '<p><strong>' + esc(t('snapshot.banner')) + '</strong> · ' +
           esc(t('snapshot.updated')) + ' ' + esc(when) +
-          (stale ? ' · ' + esc(t('snapshot.stale')) : '') +
+          (extra ? ' · ' + esc(extra) : '') +
           ' · <a href="' + esc(live) + '">' + esc(t('snapshot.openLive')) + '</a></p>' +
           '</aside>';
       }).catch(function () {

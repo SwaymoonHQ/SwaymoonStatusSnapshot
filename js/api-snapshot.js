@@ -2,9 +2,14 @@
   var cfg = window.SwaymoonConfig || {};
   if (!cfg.SNAPSHOT_MODE) return;
 
+  function snapshotUrl(path) {
+    var bucket = Math.floor(Date.now() / 300000);
+    var sep = path.indexOf('?') >= 0 ? '&' : '?';
+    return path + sep + 'v=' + bucket;
+  }
+
   function loadJson(path) {
-    var bust = path + (path.indexOf('?') >= 0 ? '&' : '?') + 't=' + Date.now();
-    return fetch(bust, { cache: 'no-store', credentials: 'omit' }).then(function (res) {
+    return fetch(snapshotUrl(path), { cache: 'no-store', credentials: 'omit' }).then(function (res) {
       return res.json().then(function (data) {
         if (!res.ok) {
           var err = new Error((data && data.error) || res.statusText);

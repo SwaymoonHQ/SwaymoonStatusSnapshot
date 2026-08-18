@@ -578,6 +578,11 @@
   border-color: rgba(255, 159, 10, 0.35);
 }
 
+.status-snapshot-banner.is-down {
+  background: rgba(255, 59, 48, 0.1);
+  border-color: rgba(255, 59, 48, 0.35);
+}
+
 .status-snapshot-banner a {
   color: #0066cc;
 }
