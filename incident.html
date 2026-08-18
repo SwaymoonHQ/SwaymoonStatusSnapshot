@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <script src="/js/i18n-messages.js"></script>
+  <script src="/js/i18n.js"></script>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <meta name="color-scheme" content="light dark" />
+  <title data-i18n="incident.detailTitle">事故详情</title>
+  <link rel="icon" href="/favicon.ico" sizes="any" />
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png" />
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+  <link rel="stylesheet" href="/css/fonts.css" />
+  <link rel="stylesheet" href="/css/developer-account.css" />
+  <link rel="stylesheet" href="/css/status.css" />
+</head>
+<body>
+  <div id="app-chrome"></div>
+  <script src="/js/config.js"></script>
+  <script src="/js/api-snapshot.js"></script>
+  <script src="/js/api.js"></script>
+  <script src="/js/snapshot-chrome.js"></script>
+  <script src="/js/shell.js"></script>
+  <script>
+    (function () {
+      var Api = window.SwaymoonStatusApi;
+      var Shell = window.SwaymoonStatusShell;
+      var t = Shell.t;
+      var esc = Shell.esc;
+      var main = Shell.mount({ active: 'history' });
+      if (!main) return;
+      var id = new URLSearchParams(location.search).get('id') || '';
+      document.title = t('incident.detailTitle') + ' · ' + t('chrome.statusMonitor');
+      var cfg = window.SwaymoonConfig || {};
+      if (cfg.SNAPSHOT_MODE && window.SwaymoonSnapshotChrome) {
+        main.innerHTML = '<div id="snapshot-banner-slot"></div><div id="incident-page-body"></div>';
+        window.SwaymoonSnapshotChrome.mountBanner('snapshot-banner-slot');
+        main = document.getElementById('incident-page-body');
+      }
+
+      function fmtTime(ms) {
+        if (ms == null) return '—';
+        try { return new Date(ms).toLocaleString(); } catch (e) { return String(ms); }
+      }
+
+      if (!id) {
+        main.innerHTML = '<p class="dev-page-desc">' + esc(t('incident.notFound')) + '</p>';
+        return;
+      }
+
+      Api.json('GET', '/api/v1/incidents/' + encodeURIComponent(id)).then(function (data) {
+        var inc = data.incident || data;
+        if (!inc || !inc.id) {
+          main.innerHTML = '<p class="dev-page-desc">' + esc(t('incident.notFound')) + '</p>';
+          return;
+        }
+        var updates = inc.updates || [];
+        var steps = [];
+        steps.push({
+          kind: 'start',
+          label: t('incident.flowStart'),
+          status: 'investigating',
+          body: '',
+          at: inc.createdAt,
+          by: inc.createdBy || '',
+        });
+        updates.forEach(function (u, idx) {
+          if (idx === 0 && u.status === 'investigating' && !u.body) return;
+          var isEnd = u.status === 'resolved';
+          steps.push({
+            kind: isEnd ? 'end' : 'update',
+            label: isEnd ? t('incident.flowEnd') : t('incident.flowUpdate'),
+            status: u.status,
+            body: u.body || '',
+            at: u.createdAt,
+            by: u.createdBy || '',
+          });
+        });
+        if (inc.resolvedAt && !steps.some(function (s) { return s.kind === 'end'; })) {
+          steps.push({
+            kind: 'end',
+            label: t('incident.flowEnd'),
+            status: 'resolved',
+            body: '',
+            at: inc.resolvedAt,
+            by: '',
+          });
+        }
+
+        var flow = steps.map(function (s, i) {
+          return (
+            '<li class="inc-flow-item is-' + esc(s.kind) + '">' +
+            '<div class="inc-flow-dot" aria-hidden="true"></div>' +
+            (i < steps.length - 1 ? '<div class="inc-flow-line" aria-hidden="true"></div>' : '') +
+            '<div class="inc-flow-card">' +
+            '<div class="inc-flow-label">' + esc(s.label) + ' · ' + esc(t('inc.' + s.status) || s.status) + '</div>' +
+            '<div class="incident-meta">' + esc(fmtTime(s.at)) +
+            (s.by ? ' · ' + esc(s.by) : '') + '</div>' +
+            (s.body ? '<p class="incident-update-body">' + esc(s.body) + '</p>' : '') +
+            '</div></li>'
+          );
+        }).join('');
+
+        main.innerHTML =
+          '<a class="back-link" href="/history.html">' + esc(t('incident.backHistory')) + '</a>' +
+          '<h1 class="dev-page-title">' + esc(inc.title) + '</h1>' +
+          '<p class="incident-meta">' +
+          esc(t('severity.' + inc.severity) || inc.severity) + ' · ' +
+          esc(t('inc.' + inc.status) || inc.status) +
+          ((inc.impactComponents || []).length
+            ? ' · ' + esc((inc.impactComponents || []).map(function (cid) {
+                return t('component.' + cid) || cid;
+              }).join(' · '))
+            : '') +
+          '</p>' +
+          '<ol class="inc-flow">' + flow + '</ol>';
+      }).catch(function (err) {
+        main.innerHTML = '<p class="dev-page-desc">' + esc(String(err.message || err)) + '</p>';
+      });
+    })();
+  </script>
+</body>
+</html>

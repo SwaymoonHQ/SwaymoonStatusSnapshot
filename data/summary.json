@@ -1,0 +1,110 @@
+{
+  "overall": "operational",
+  "probedAt": 1787028967831,
+  "edge": "virginia",
+  "components": [
+    {
+      "id": "passport",
+      "group": "products",
+      "nameKey": "component.passport",
+      "status": "operational",
+      "message": "",
+      "origin": {
+        "ok": true,
+        "latencyMs": 1139,
+        "reason": "Origin server (Jiangsu) reachable",
+        "edge": "virginia",
+        "probedAt": 1787028967831
+      }
+    },
+    {
+      "id": "develop",
+      "group": "products",
+      "nameKey": "component.develop",
+      "status": "operational",
+      "message": "",
+      "origin": {
+        "ok": true,
+        "latencyMs": 562,
+        "reason": "Origin server (Jiangsu) reachable",
+        "edge": "virginia",
+        "probedAt": 1787028967254
+      }
+    },
+    {
+      "id": "docs",
+      "group": "products",
+      "nameKey": "component.docs",
+      "status": "operational",
+      "message": "",
+      "origin": {
+        "ok": true,
+        "latencyMs": 564,
+        "reason": "Origin server (Jiangsu) reachable",
+        "edge": "virginia",
+        "probedAt": 1787028967257
+      }
+    },
+    {
+      "id": "reportaproblem",
+      "group": "products",
+      "nameKey": "component.reportaproblem",
+      "status": "operational",
+      "message": "",
+      "origin": {
+        "ok": true,
+        "latencyMs": 564,
+        "reason": "Origin server (Jiangsu) reachable",
+        "edge": "virginia",
+        "probedAt": 1787028967257
+      }
+    },
+    {
+      "id": "sitemap",
+      "group": "products",
+      "nameKey": "component.sitemap",
+      "status": "operational",
+      "message": "",
+      "origin": {
+        "ok": true,
+        "latencyMs": 566,
+        "reason": "Origin server (Jiangsu) reachable",
+        "edge": "virginia",
+        "probedAt": 1787028967259
+      }
+    },
+    {
+      "id": "admin",
+      "group": "products",
+      "nameKey": "component.admin",
+      "status": "operational",
+      "message": "",
+      "origin": {
+        "ok": true,
+        "latencyMs": 564,
+        "reason": "Origin server (Jiangsu) reachable",
+        "edge": "virginia",
+        "probedAt": 1787028967259
+      }
+    }
+  ],
+  "incidents": [],
+  "maintenances": [
+    {
+      "id": "785fa8fd-c9d7-45e3-83bf-5cdb0e858888",
+      "title": "边缘节点（杭州）计划",
+      "body": "边缘节点将重新启动以释放内存占用。",
+      "impactComponents": [
+        "passport",
+        "develop",
+        "docs",
+        "reportaproblem",
+        "sitemap",
+        "admin"
+      ],
+      "startsAt": 1787068800000,
+      "endsAt": 1787070000000,
+      "active": false
+    }
+  ]
+}

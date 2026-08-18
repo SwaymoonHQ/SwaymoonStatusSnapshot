@@ -1,0 +1,115 @@
+/* 思源黑体（Source Han Sans / Noto Sans CJK）自托管，SIL OFL 1.1。
+   不使用 Google Fonts。苹果设备优先系统字体，命中后不会下载 webfont。 */
+
+@font-face {
+  font-family: "Source Han Sans SC";
+  src: local("Source Han Sans SC"), local("Source Han Sans CN"), local("Noto Sans CJK SC"),
+    url("/fonts/SourceHanSansSC-Regular.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Source Han Sans SC";
+  src: local("Source Han Sans SC"), local("Source Han Sans CN"), local("Noto Sans CJK SC"),
+    url("/fonts/SourceHanSansSC-Regular.woff2") format("woff2");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Source Han Sans TC";
+  src: local("Source Han Sans TC"), local("Source Han Sans TW"), local("Noto Sans CJK TC"),
+    url("/fonts/SourceHanSansTC-Regular.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Source Han Sans TC";
+  src: local("Source Han Sans TC"), local("Source Han Sans TW"), local("Noto Sans CJK TC"),
+    url("/fonts/SourceHanSansTC-Regular.woff2") format("woff2");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Source Han Sans JP";
+  src: local("Source Han Sans JP"), local("Source Han Sans"), local("Noto Sans CJK JP"),
+    url("/fonts/SourceHanSansJP-Regular.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Source Han Sans JP";
+  src: local("Source Han Sans JP"), local("Source Han Sans"), local("Noto Sans CJK JP"),
+    url("/fonts/SourceHanSansJP-Regular.woff2") format("woff2");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+:root {
+  --font-latin: "SF Pro Text", "SF Pro Display", -apple-system, BlinkMacSystemFont, "Helvetica Neue";
+  --font-cjk-sc: "PingFang SC", "Hiragino Sans GB", "Source Han Sans SC", "Noto Sans CJK SC", "Microsoft YaHei";
+  --font-cjk-tc: "PingFang TC", "Hiragino Sans CNS", "Source Han Sans TC", "Noto Sans CJK TC", "Microsoft JhengHei";
+  --font-cjk-jp: "Hiragino Sans", "Hiragino Kaku Gothic ProN", "Source Han Sans JP", "Noto Sans CJK JP", "Yu Gothic", "YuGothic", "Meiryo";
+  --font: var(--font-latin), var(--font-cjk-sc), sans-serif;
+}
+
+html,
+html[lang="zh-CN"],
+html[lang="zh"] {
+  --font: var(--font-latin), var(--font-cjk-sc), sans-serif;
+}
+
+html[lang="zh-TW"],
+html[lang="zh-HK"],
+html[lang="zh-Hant"] {
+  --font: var(--font-latin), var(--font-cjk-tc), sans-serif;
+}
+
+html[lang="ja"] {
+  --font: var(--font-latin), var(--font-cjk-jp), sans-serif;
+}
+
+html[lang="en"] {
+  --font: var(--font-latin), var(--font-cjk-sc), sans-serif;
+}
+
+.locale-switcher {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 14px;
+  justify-content: center;
+  margin: 12px 0 0;
+  font-size: 12px;
+  line-height: 1.33;
+  letter-spacing: 0;
+}
+
+.locale-switcher-item {
+  appearance: none;
+  background: none;
+  border: 0;
+  padding: 0;
+  margin: 0;
+  color: var(--text-tertiary, #86868b);
+  cursor: pointer;
+  font: inherit;
+}
+
+.locale-switcher-item.is-active {
+  color: var(--text, #1d1d1f);
+  font-weight: 600;
+}
+
+.locale-switcher-item:hover {
+  color: var(--text, #1d1d1f);
+}

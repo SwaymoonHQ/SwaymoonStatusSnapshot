@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <script src="/js/i18n-messages.js"></script>
+  <script src="/js/i18n.js"></script>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <meta name="color-scheme" content="light dark" />
+  <title data-i18n="brand">摇月 Swaymoon</title>
+  <link rel="icon" href="/favicon.ico" sizes="any" />
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png" />
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+  <link rel="stylesheet" href="/css/fonts.css" />
+  <link rel="stylesheet" href="/css/developer-account.css" />
+  <link rel="stylesheet" href="/css/status.css" />
+</head>
+<body>
+  <div id="app-chrome"></div>
+  <script src="/js/config.js"></script>
+  <script src="/js/api-snapshot.js"></script>
+  <script src="/js/api.js"></script>
+  <script src="/js/snapshot-chrome.js"></script>
+  <script src="/js/shell.js"></script>
+  <script src="/js/history-bar.js"></script>
+  <script>
+    (function () {
+      var Api = window.SwaymoonStatusApi;
+      var Shell = window.SwaymoonStatusShell;
+      var HistoryBar = window.SwaymoonHistoryBar;
+      var t = Shell.t;
+      var esc = Shell.esc;
+      var cfg = window.SwaymoonConfig || {};
+      var isSnapshot = !!cfg.SNAPSHOT_MODE;
+      var liveOrigin = (cfg.LIVE_ORIGIN || 'https://status.swaymoon.com').replace(/\/$/, '');
+      var main = Shell.mount({ active: 'home' });
+      if (!main) return;
+      document.title = t('brand') + ' · ' + t('chrome.statusMonitor');
+
+      function labelStatus(s) { return t('status.' + s) || s; }
+
+      function fmtTime(ms) {
+        if (ms == null) return '—';
+        try { return new Date(ms).toLocaleString(); } catch (e) { return String(ms); }
+      }
+
+      function stableJson(v) {
+        try { return JSON.stringify(v); } catch (e) { return String(v); }
+      }
+
+      main.innerHTML =
+        '<div id="snapshot-banner-slot"></div>' +
+        '<div id="status-banner-slot"></div>' +
+        '<div id="history-bar-root"></div>' +
+        '<div id="status-body"></div>';
+      HistoryBar.mount(document.getElementById('history-bar-root'), { t: t, esc: esc, days: 7 });
+      if (isSnapshot && window.SwaymoonSnapshotChrome) {
+        window.SwaymoonSnapshotChrome.mountBanner('snapshot-banner-slot');
+      }
+
+      var lastSummaryKey = '';
+      var subscribePainted = false;
+      var pollTimer = null;
+      var POLL_MS = 15000;
+
+      function incidentsHtml(incidents) {
+        if (!incidents.length) return '';
+        return '<section class="status-section" id="incidents-section"><h2 class="dev-section-title">' +
+          esc(t('section.incidents')) + '</h2>' +
+          incidents.map(function (inc) {
+            var updates = (inc.updates || []).map(function (u) {
+              return '<div class="incident-update">' +
+                '<div class="incident-meta"><strong>' + esc(t('inc.' + u.status) || u.status) + '</strong>' +
+                (u.createdAt ? ' · ' + esc(fmtTime(u.createdAt)) : '') + '</div>' +
+                (u.body ? '<p class="incident-update-body">' + esc(u.body) + '</p>' : '') +
+                '</div>';
+            }).join('');
+            return '<article class="incident-card"><h3><a class="incident-title-link" href="/incident.html?id=' +
+              encodeURIComponent(inc.id) + '">' + esc(inc.title) + '</a></h3>' +
+              '<div class="incident-meta">' +
+              esc(t('severity.' + inc.severity) || inc.severity) + ' · ' +
+              esc(t('inc.' + inc.status) || inc.status) +
+              ((inc.impactComponents || []).length
+                ? ' · ' + esc((inc.impactComponents || []).map(function (id) {
+                    return t('component.' + id) || id;
+                  }).join(' · '))
+                : '') +
+              '</div>' +
+              (updates || '') +
+              '<p class="incident-meta"><a href="/incident.html?id=' + encodeURIComponent(inc.id) + '">' +
+              esc(t('history.detail')) + '</a></p>' +
+              '</article>';
+          }).join('') + '</section>';
+      }
+
+      function maintsHtml(maints) {
+        if (!maints.length) return '';
+        return '<section class="status-section" id="maint-section"><h2 class="dev-section-title">' +
+          esc(t('section.maintenance')) + '</h2>' +
+          maints.map(function (m) {
+            return '<article class="maint-card"><h3>' + esc(m.title) + '</h3>' +
+              '<div class="maint-meta">' + esc(t('maint.window')) + ': ' +
+              esc(fmtTime(m.startsAt)) + ' – ' + esc(fmtTime(m.endsAt)) + '</div>' +
+              '<div class="maint-meta">' + esc(t('maint.components')) + ': ' +
+              esc((m.impactComponents || []).map(function (id) { return t('component.' + id) || id; }).join(' · ') || '—') + '</div>' +
+              (m.body ? '<p class="maint-body">' + esc(m.body) + '</p>' : '') +
+              '</article>';
+          }).join('') + '</section>';
+      }
+
+      function sitesHtml(products) {
+        return '<section class="status-section" id="sites-section"><h2 class="dev-section-title">' +
+          esc(t('section.sites')) + '</h2>' +
+          '<div class="site-list">' + products.map(function (c) {
+            var href = '/site.html?id=' + encodeURIComponent(c.id);
+            return '<a class="site-row" href="' + esc(href) + '">' +
+              '<div class="site-name">' + esc(t(c.nameKey)) + '</div>' +
+              '<div class="comp-status"><span class="comp-dot is-' + esc(c.status) + '"></span>' +
+              esc(labelStatus(c.status)) + '</div>' +
+              '<span class="site-open">' + esc(t('section.open')) + '</span></a>';
+          }).join('') + '</div></section>';
+      }
+
+      function ensureBodySkeleton() {
+        var body = document.getElementById('status-body');
+        if (!body) return null;
+        if (!document.getElementById('status-dynamic')) {
+          body.innerHTML = '<div id="status-dynamic"></div>' +
+            (isSnapshot ? '' :
+              ('<section class="status-section" id="subscribe-section">' +
+              '<h2 class="dev-section-title">' + esc(t('section.subscribe')) + '</h2>' +
+              '<div id="subscribe-root"><p class="dev-page-desc">' + esc(t('subscribe.hint')) + '</p></div>' +
+              '</section>'));
+        }
+        return body;
+      }
+
+      function render(data) {
+        ensureBodySkeleton();
+        var products = (data.components || []).filter(function (c) { return c.group === 'products'; });
+        var incidents = data.incidents || [];
+        var maints = data.maintenances || [];
+        var key = stableJson({
+          overall: data.overall,
+          incidents: incidents,
+          maintenances: maints,
+          components: products.map(function (c) { return { id: c.id, status: c.status }; }),
+        });
+        if (key === lastSummaryKey) {
+          if (!isSnapshot && !subscribePainted) paintSubscribe();
+          return;
+        }
+        lastSummaryKey = key;
+
+        var banner = document.getElementById('status-banner-slot');
+        if (banner) {
+          banner.innerHTML =
+            '<section class="status-banner is-' + esc(data.overall || 'unknown') + '">' +
+            '<h1 class="dev-page-title">' + esc(t('banner.' + (data.overall || 'unknown'))) + '</h1>' +
+            '</section>';
+        }
+
+        var dynamic = document.getElementById('status-dynamic');
+        if (dynamic) {
+          dynamic.innerHTML =
+            incidentsHtml(incidents) +
+            maintsHtml(maints) +
+            sitesHtml(products);
+        }
+
+        if (!isSnapshot && !subscribePainted) paintSubscribe();
+      }
+
+      function paintSubscribe() {
+        if (isSnapshot) return;
+        var root = document.getElementById('subscribe-root');
+        if (!root) return;
+        subscribePainted = true;
+        var cfg = window.SwaymoonConfig || {};
+        var passport = (cfg.PASSPORT_FRONTEND || 'https://passport.swaymoon.com').replace(/\/$/, '');
+
+        function showPrivacyBlocked(data) {
+          root.innerHTML =
+            '<p class="rap-error">' + esc(t('subscribe.privacyBlocked')) + '</p>' +
+            '<p class="rap-actions"><a class="btn-primary" href="' +
+            esc((data && data.privacyUrl) || (passport + '/privacy.html')) + '">' +
+            esc(t('subscribe.privacyFix')) + '</a> ' +
+            '<a class="btn-secondary" href="/api/v1/auth/login?return_to=' +
+            encodeURIComponent(location.pathname + location.search) + '">' +
+            esc(t('subscribe.login')) + '</a></p>';
+        }
+
+        Api.json('GET', '/api/v1/auth/session').then(function (session) {
+          if (!session || !session.authenticated) {
+            root.innerHTML =
+              '<p class="dev-page-desc">' + esc(t('subscribe.hint')) + '</p>' +
+              '<p class="rap-actions"><a class="btn-primary" href="/api/v1/auth/login?return_to=' +
+              encodeURIComponent(location.pathname + location.search) + '">' + esc(t('subscribe.login')) + '</a></p>';
+            return;
+          }
+          return Api.json('GET', '/api/v1/subscribe/me').then(function (me) {
+            if (me && me.error === 'privacy_email_blocked') {
+              showPrivacyBlocked(me);
+              return;
+            }
+            var email = me.email || session.email || '';
+            var name = me.name || session.name || '';
+            var enabled = !!me.enabled;
+            root.innerHTML =
+              '<p class="dev-page-desc">' + esc(t('subscribe.hint')) + '</p>' +
+              '<p class="incident-meta">' + esc(name) + (email ? ' · ' + esc(t('subscribe.as')) + ' ' + esc(email) : '') + '</p>' +
+              '<label class="subscribe-switch">' +
+              '<input type="checkbox" id="sub-toggle"' + (enabled ? ' checked' : '') + ' />' +
+              '<span class="subscribe-switch-ui" aria-hidden="true"></span>' +
+              '<span class="subscribe-switch-label">' + esc(t('subscribe.toggle')) +
+              ' · <strong id="sub-state">' + esc(enabled ? t('subscribe.on') : t('subscribe.off')) + '</strong></span></label>' +
+              '<p class="incident-meta" id="sub-msg" hidden></p>';
+            document.getElementById('sub-toggle').addEventListener('change', function (ev) {
+              var on = !!ev.target.checked;
+              var msg = document.getElementById('sub-msg');
+              Api.json('POST', on ? '/api/v1/subscribe/enable' : '/api/v1/subscribe/disable', {}).then(function () {
+                document.getElementById('sub-state').textContent = on ? t('subscribe.on') : t('subscribe.off');
+                msg.hidden = false;
+                msg.textContent = t('subscribe.ok');
+              }).catch(function (err) {
+                ev.target.checked = !on;
+                msg.hidden = false;
+                var data = err && err.data;
+                if (data && data.error === 'privacy_email_blocked') {
+                  showPrivacyBlocked(data);
+                  return;
+                }
+                msg.textContent = (data && (data.message || data.error)) || String(err.message || err);
+              });
+            });
+          });
+        }).catch(function (err) {
+          var data = err && err.data;
+          if (data && data.error === 'privacy_email_blocked') {
+            showPrivacyBlocked(data);
+            return;
+          }
+          root.innerHTML = '<p class="dev-page-desc">' + esc(String(err.message || err)) + '</p>';
+        });
+      }
+
+      function load() {
+        if (document.hidden) return;
+        Api.json('GET', '/api/v1/summary').then(render).catch(function (err) {
+          lastSummaryKey = '';
+          main.innerHTML = '<p class="dev-page-desc">' + esc(String(err.message || err)) + '</p>';
+          subscribePainted = false;
+        });
+      }
+
+      function startPoll() {
+        if (pollTimer) clearInterval(pollTimer);
+        pollTimer = setInterval(load, POLL_MS);
+      }
+
+      document.addEventListener('visibilitychange', function () {
+        if (!document.hidden) load();
+      });
+
+      load();
+      if (!isSnapshot) startPoll();
+    })();
+  </script>
+</body>
+</html>

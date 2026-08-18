@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <script src="/js/i18n-messages.js"></script>
+  <script src="/js/i18n.js"></script>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <meta name="color-scheme" content="light dark" />
+  <title>站点路径 - 摇月 Swaymoon</title>
+  <link rel="icon" href="/favicon.ico" sizes="any" />
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png" />
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+  <link rel="stylesheet" href="/css/fonts.css" />
+  <link rel="stylesheet" href="/css/developer-account.css" />
+  <link rel="stylesheet" href="/css/status.css" />
+</head>
+<body>
+  <div id="app-chrome"></div>
+  <script src="/js/config.js"></script>
+  <script src="/js/api-snapshot.js"></script>
+  <script src="/js/api.js"></script>
+  <script src="/js/snapshot-chrome.js"></script>
+  <script src="/js/shell.js"></script>
+  <script src="/js/topology.js"></script>
+  <script src="/js/history-bar.js"></script>
+  <script>
+    (function () {
+      var Shell = window.SwaymoonStatusShell;
+      var Topology = window.SwaymoonTopology;
+      var HistoryBar = window.SwaymoonHistoryBar;
+      var t = Shell.t;
+      var esc = Shell.esc;
+      var cfg = window.SwaymoonConfig || {};
+      var isSnapshot = !!cfg.SNAPSHOT_MODE;
+      var liveOrigin = (cfg.LIVE_ORIGIN || 'https://status.swaymoon.com').replace(/\/$/, '');
+      var params = new URLSearchParams(location.search);
+      var siteId = params.get('id') || 'passport';
+      if (Shell.SITES.indexOf(siteId) < 0) siteId = 'passport';
+
+      var main = Shell.mount({ active: siteId });
+      if (!main) return;
+      document.title = t('component.' + siteId) + ' · ' + t('chrome.statusMonitor');
+
+      main.innerHTML =
+        (isSnapshot ? '<div id="snapshot-banner-slot"></div>' : '') +
+        '<a class="back-link" href="/">' + esc(t('back.overview')) + '</a>' +
+        '<div id="history-bar-root"></div>' +
+        '<div id="topo-root"></div>';
+      if (isSnapshot && window.SwaymoonSnapshotChrome) {
+        window.SwaymoonSnapshotChrome.mountBanner('snapshot-banner-slot');
+      }
+      HistoryBar.mount(document.getElementById('history-bar-root'), {
+        t: t,
+        esc: esc,
+        days: 7,
+        component: siteId,
+      });
+      var root = document.getElementById('topo-root');
+      if (isSnapshot) {
+        root.innerHTML =
+          '<p class="dev-page-desc">' + esc(t('snapshot.topologyStatic')) + '</p>' +
+          '<p class="rap-actions"><a class="btn-primary" href="' + esc(liveOrigin + '/site.html?id=' + encodeURIComponent(siteId)) + '">' +
+          esc(t('snapshot.openLive')) + '</a></p>';
+        return;
+      }
+      var state = {
+        edges: Topology.loadingEdges(),
+        inFlight: {},
+        t: t,
+      };
+
+      function paint() {
+        Topology.render(root, {
+          title: t('component.' + siteId),
+          edges: state.edges,
+          t: t,
+        });
+      }
+
+      paint();
+
+      function tick() {
+        Topology.measureSite(siteId, paint, state);
+      }
+      tick();
+      setInterval(function () {
+        if (!document.hidden) tick();
+      }, 15000);
+      document.addEventListener('visibilitychange', function () {
+        if (!document.hidden) tick();
+      });
+    })();
+  </script>
+</body>
+</html>
