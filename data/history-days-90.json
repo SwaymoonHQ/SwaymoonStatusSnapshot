@@ -627,8 +627,44 @@
       "date": "2026-08-23",
       "startAt": 1787414400000,
       "endAt": 1787500800000,
-      "level": "ok",
-      "incidents": []
+      "level": "major",
+      "incidents": [
+        {
+          "id": "89df258e-61d3-4ffd-bdfb-a96648e109a8",
+          "title": "通行账户不可用",
+          "severity": "major"
+        },
+        {
+          "id": "bfa1d961-f86e-444d-ae68-f4ae53c396ed",
+          "title": "开发者门户不可用",
+          "severity": "major"
+        },
+        {
+          "id": "0b9750d5-7822-4c37-984c-a79da121c5a6",
+          "title": "文档中心不可用",
+          "severity": "major"
+        },
+        {
+          "id": "15755733-21f0-4c25-b79e-06257e2e3cfc",
+          "title": "报告问题门户不可用",
+          "severity": "major"
+        },
+        {
+          "id": "c06d7dbe-8b42-4f74-97a1-165fc55ef084",
+          "title": "网页地图不可用",
+          "severity": "major"
+        },
+        {
+          "id": "359f86a2-3c72-4ed7-a66f-8d6185f6854b",
+          "title": "管理台不可用",
+          "severity": "major"
+        },
+        {
+          "id": "48039488-6ff6-447a-adb3-03be2237bdb6",
+          "title": "问卷不可用",
+          "severity": "major"
+        }
+      ]
     }
   ],
   "componentId": null,
