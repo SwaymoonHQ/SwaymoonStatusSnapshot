@@ -1,7 +1,7 @@
 {
-  "overall": "major_outage",
-  "probedAt": 1788066600365,
-  "edge": "virginia",
+  "overall": "operational",
+  "probedAt": 1788066899012,
+  "edge": "hangzhou",
   "components": [
     {
       "id": "passport",
@@ -11,24 +11,24 @@
       "message": "",
       "origin": {
         "ok": true,
-        "latencyMs": 1630,
+        "latencyMs": 85,
         "reason": "Origin server (Jiangsu) reachable",
-        "edge": "virginia",
-        "probedAt": 1788066600365
+        "edge": "hangzhou",
+        "probedAt": 1788066899012
       }
     },
     {
       "id": "develop",
       "group": "products",
       "nameKey": "component.develop",
-      "status": "major_outage",
+      "status": "operational",
       "message": "",
       "origin": {
         "ok": true,
-        "latencyMs": 570,
+        "latencyMs": 48,
         "reason": "Origin server (Jiangsu) reachable",
-        "edge": "virginia",
-        "probedAt": 1788066599306
+        "edge": "hangzhou",
+        "probedAt": 1788066898975
       }
     },
     {
@@ -39,24 +39,24 @@
       "message": "",
       "origin": {
         "ok": true,
-        "latencyMs": 569,
+        "latencyMs": 47,
         "reason": "Origin server (Jiangsu) reachable",
-        "edge": "virginia",
-        "probedAt": 1788066599306
+        "edge": "hangzhou",
+        "probedAt": 1788066898979
       }
     },
     {
       "id": "reportaproblem",
       "group": "products",
       "nameKey": "component.reportaproblem",
-      "status": "major_outage",
+      "status": "operational",
       "message": "",
       "origin": {
         "ok": true,
-        "latencyMs": 568,
+        "latencyMs": 52,
         "reason": "Origin server (Jiangsu) reachable",
-        "edge": "virginia",
-        "probedAt": 1788066599306
+        "edge": "hangzhou",
+        "probedAt": 1788066898987
       }
     },
     {
@@ -67,10 +67,10 @@
       "message": "",
       "origin": {
         "ok": true,
-        "latencyMs": 567,
+        "latencyMs": 52,
         "reason": "Origin server (Jiangsu) reachable",
-        "edge": "virginia",
-        "probedAt": 1788066599305
+        "edge": "hangzhou",
+        "probedAt": 1788066898987
       }
     },
     {
@@ -81,10 +81,10 @@
       "message": "",
       "origin": {
         "ok": true,
-        "latencyMs": 567,
+        "latencyMs": 52,
         "reason": "Origin server (Jiangsu) reachable",
-        "edge": "virginia",
-        "probedAt": 1788066599305
+        "edge": "hangzhou",
+        "probedAt": 1788066898989
       }
     },
     {
@@ -95,58 +95,13 @@
       "message": "",
       "origin": {
         "ok": true,
-        "latencyMs": 571,
+        "latencyMs": 51,
         "reason": "Origin server (Jiangsu) reachable",
-        "edge": "virginia",
-        "probedAt": 1788066599310
+        "edge": "hangzhou",
+        "probedAt": 1788066898989
       }
     }
   ],
-  "incidents": [
-    {
-      "id": "6d2bcd14-5c5e-487e-94f5-f72463d8132d",
-      "title": "开发者门户不可用",
-      "severity": "major",
-      "status": "investigating",
-      "impactComponents": [
-        "develop"
-      ],
-      "createdAt": 1788065325025,
-      "updatedAt": 1788065325025,
-      "resolvedAt": null,
-      "createdBy": "probe",
-      "updates": [
-        {
-          "id": "51d9f894-5c5c-43bb-9de2-6a1a1b7ec283",
-          "status": "investigating",
-          "body": "探针自动检测（连续不可达超过一分钟）：Origin server (Jiangsu) unreachable",
-          "createdAt": 1788065325025,
-          "createdBy": "probe"
-        }
-      ]
-    },
-    {
-      "id": "115e491c-ab16-4246-b7c8-d74c1c7bbd75",
-      "title": "报告问题门户不可用",
-      "severity": "major",
-      "status": "investigating",
-      "impactComponents": [
-        "reportaproblem"
-      ],
-      "createdAt": 1788065325025,
-      "updatedAt": 1788065325025,
-      "resolvedAt": null,
-      "createdBy": "probe",
-      "updates": [
-        {
-          "id": "2a23826d-19c9-422f-b91e-c2c2a5035f29",
-          "status": "investigating",
-          "body": "探针自动检测（连续不可达超过一分钟）：Origin server (Jiangsu) unreachable",
-          "createdAt": 1788065325025,
-          "createdBy": "probe"
-        }
-      ]
-    }
-  ],
+  "incidents": [],
   "maintenances": []
 }
