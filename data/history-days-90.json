@@ -699,8 +699,24 @@
       "date": "2026-08-30",
       "startAt": 1788019200000,
       "endAt": 1788105600000,
-      "level": "ok",
-      "incidents": []
+      "level": "major",
+      "incidents": [
+        {
+          "id": "596b2639-a522-4d42-ae25-caec03756e38",
+          "title": "通行账户不可用",
+          "severity": "major"
+        },
+        {
+          "id": "6d2bcd14-5c5e-487e-94f5-f72463d8132d",
+          "title": "开发者门户不可用",
+          "severity": "major"
+        },
+        {
+          "id": "115e491c-ab16-4246-b7c8-d74c1c7bbd75",
+          "title": "报告问题门户不可用",
+          "severity": "major"
+        }
+      ]
     }
   ],
   "componentId": null,
