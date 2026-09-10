@@ -1,9 +1,11 @@
 {
-  "generatedAt": 1789046701175,
-  "generatedAtIso": "2026-09-10T13:25:01Z",
+  "generatedAt": 1789046703473,
+  "generatedAtIso": "2026-09-10T13:25:40Z",
   "source": "https://status.swaymoon.com",
   "liveOrigin": "https://status.swaymoon.com",
-  "stale": false,
+  "stale": true,
   "originUnreachable": false,
-  "fetchErrors": []
+  "fetchErrors": [
+    "/api/v1/incidents/9f28ba01-2088-4156-a6e3-7b80b034d7a1: HTTP Error 502: Bad Gateway"
+  ]
 }
