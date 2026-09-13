@@ -6,7 +6,7 @@
   var DOCS_LEGAL_PRIVACY = DOCS + '/legal/status/privacy.html';
   var DOCS_LEGAL_ABUSE = DOCS + '/legal/status/abuse.html';
   var SITES = [
-    'passport', 'develop', 'docs', 'reportaproblem', 'sitemap', 'admin'
+    'passport', 'develop', 'docs', 'reportaproblem', 'sitemap', 'admin', 'survey'
   ];
 
   function t(key) {
