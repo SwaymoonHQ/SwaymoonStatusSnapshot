@@ -1,7 +1,7 @@
 {
   "overall": "operational",
-  "probedAt": 1789428296650,
-  "edge": "virginia",
+  "probedAt": 1789428598844,
+  "edge": "hangzhou",
   "components": [
     {
       "id": "passport",
@@ -10,11 +10,11 @@
       "status": "operational",
       "message": "",
       "origin": {
-        "ok": false,
-        "latencyMs": null,
-        "reason": "Origin server (Jiangsu) unreachable",
-        "edge": "virginia",
-        "probedAt": 1789428296648
+        "ok": true,
+        "latencyMs": 127,
+        "reason": "Origin server (Jiangsu) reachable",
+        "edge": "hangzhou",
+        "probedAt": 1789428598844
       }
     },
     {
@@ -24,11 +24,11 @@
       "status": "operational",
       "message": "",
       "origin": {
-        "ok": false,
-        "latencyMs": null,
-        "reason": "Origin server (Jiangsu) unreachable",
-        "edge": "virginia",
-        "probedAt": 1789428296648
+        "ok": true,
+        "latencyMs": 52,
+        "reason": "Origin server (Jiangsu) reachable",
+        "edge": "hangzhou",
+        "probedAt": 1789428598779
       }
     },
     {
@@ -38,11 +38,11 @@
       "status": "operational",
       "message": "",
       "origin": {
-        "ok": false,
-        "latencyMs": null,
-        "reason": "Origin server (Jiangsu) unreachable",
-        "edge": "virginia",
-        "probedAt": 1789428296648
+        "ok": true,
+        "latencyMs": 62,
+        "reason": "Origin server (Jiangsu) reachable",
+        "edge": "hangzhou",
+        "probedAt": 1789428598785
       }
     },
     {
@@ -52,11 +52,11 @@
       "status": "operational",
       "message": "",
       "origin": {
-        "ok": false,
-        "latencyMs": null,
-        "reason": "Origin server (Jiangsu) unreachable",
-        "edge": "virginia",
-        "probedAt": 1789428296646
+        "ok": true,
+        "latencyMs": 53,
+        "reason": "Origin server (Jiangsu) reachable",
+        "edge": "hangzhou",
+        "probedAt": 1789428598773
       }
     },
     {
@@ -66,11 +66,11 @@
       "status": "operational",
       "message": "",
       "origin": {
-        "ok": false,
-        "latencyMs": null,
-        "reason": "Origin server (Jiangsu) unreachable",
-        "edge": "virginia",
-        "probedAt": 1789428296648
+        "ok": true,
+        "latencyMs": 70,
+        "reason": "Origin server (Jiangsu) reachable",
+        "edge": "hangzhou",
+        "probedAt": 1789428598795
       }
     },
     {
@@ -80,11 +80,11 @@
       "status": "operational",
       "message": "",
       "origin": {
-        "ok": false,
-        "latencyMs": null,
-        "reason": "Origin server (Jiangsu) unreachable",
-        "edge": "virginia",
-        "probedAt": 1789428296648
+        "ok": true,
+        "latencyMs": 50,
+        "reason": "Origin server (Jiangsu) reachable",
+        "edge": "hangzhou",
+        "probedAt": 1789428598782
       }
     },
     {
@@ -94,11 +94,11 @@
       "status": "operational",
       "message": "",
       "origin": {
-        "ok": false,
-        "latencyMs": null,
-        "reason": "Origin server (Jiangsu) unreachable",
-        "edge": "virginia",
-        "probedAt": 1789428296650
+        "ok": true,
+        "latencyMs": 72,
+        "reason": "Origin server (Jiangsu) reachable",
+        "edge": "hangzhou",
+        "probedAt": 1789428598797
       }
     }
   ],
