@@ -1,13 +1,6 @@
 {
   "days": [
     {
-      "date": "2026-06-18",
-      "startAt": 1781712000000,
-      "endAt": 1781798400000,
-      "level": "ok",
-      "incidents": []
-    },
-    {
       "date": "2026-06-19",
       "startAt": 1781798400000,
       "endAt": 1781884800000,
@@ -951,6 +944,24 @@
         {
           "id": "cd4785b1-3f4a-43d5-998a-c882ffc8c40c",
           "title": "问卷不可用",
+          "severity": "major"
+        }
+      ]
+    },
+    {
+      "date": "2026-09-16",
+      "startAt": 1789488000000,
+      "endAt": 1789574400000,
+      "level": "major",
+      "incidents": [
+        {
+          "id": "3dadac7c-b4b9-4943-beb8-38dd47c6a236",
+          "title": "边缘节点（杭州）宕机事故",
+          "severity": "major"
+        },
+        {
+          "id": "97d0aa74-65cc-4af3-a5ac-e224676a8938",
+          "title": "边缘节点（杭州）宕机事故",
           "severity": "major"
         }
       ]
