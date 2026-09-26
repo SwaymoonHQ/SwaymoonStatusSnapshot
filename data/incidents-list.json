@@ -1,30 +1,31 @@
 {
   "incidents": [
     {
-      "id": "snapshot-origin-unreachable",
-      "title": "状态源不可达",
+      "id": "ec49f439-fd88-464d-bfd2-abc5c0c631c4",
+      "title": "通行账户不可用",
       "severity": "major",
-      "status": "investigating",
+      "status": "resolved",
       "impactComponents": [
-        "passport",
-        "develop",
-        "docs",
-        "reportaproblem",
-        "sitemap",
-        "admin",
-        "survey"
+        "passport"
       ],
-      "createdAt": 1790447701545,
-      "updatedAt": 1790447701545,
-      "resolvedAt": null,
-      "createdBy": "snapshot",
+      "createdAt": 1790446796905,
+      "updatedAt": 1790447569548,
+      "resolvedAt": 1790447569548,
+      "createdBy": "probe",
       "updates": [
         {
-          "id": "snapshot-origin-unreachable-1",
+          "id": "371173c7-6c22-4a5a-927c-130a39c859a5",
           "status": "investigating",
-          "body": "杭州与弗吉尼亚状态节点均无法拉取。快照保留最近一次成功数据，并将全局状态标为严重中断。",
-          "createdAt": 1790447701545,
-          "createdBy": "snapshot"
+          "body": "探针自动检测（连续不可达超过一分钟）：Origin server (Jiangsu) unreachable",
+          "createdAt": 1790446796905,
+          "createdBy": "probe"
+        },
+        {
+          "id": "c98ab9d1-71fe-4d6b-9725-5576237692bf",
+          "status": "resolved",
+          "body": "探针恢复：服务已连续可达超过一分钟。",
+          "createdAt": 1790447569548,
+          "createdBy": "probe"
         }
       ]
     },
@@ -32,13 +33,13 @@
       "id": "8f637c80-86fc-464c-a5d5-e0d04cb1109b",
       "title": "通行账户不可用",
       "severity": "major",
-      "status": "investigating",
+      "status": "resolved",
       "impactComponents": [
         "passport"
       ],
       "createdAt": 1790442285855,
-      "updatedAt": 1790442285855,
-      "resolvedAt": null,
+      "updatedAt": 1790445451067,
+      "resolvedAt": 1790445451067,
       "createdBy": "probe",
       "updates": [
         {
@@ -46,6 +47,13 @@
           "status": "investigating",
           "body": "探针自动检测（连续不可达超过一分钟）：Origin server (Jiangsu) unreachable",
           "createdAt": 1790442285855,
+          "createdBy": "probe"
+        },
+        {
+          "id": "bd5fd151-be11-4695-a04d-33064fbe799c",
+          "status": "resolved",
+          "body": "探针恢复：服务已连续可达超过一分钟。",
+          "createdAt": 1790445451067,
           "createdBy": "probe"
         }
       ]
