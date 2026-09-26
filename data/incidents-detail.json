@@ -3,13 +3,13 @@
     "id": "8f637c80-86fc-464c-a5d5-e0d04cb1109b",
     "title": "通行账户不可用",
     "severity": "major",
-    "status": "investigating",
+    "status": "resolved",
     "impactComponents": [
       "passport"
     ],
     "createdAt": 1790442285855,
-    "updatedAt": 1790442285855,
-    "resolvedAt": null,
+    "updatedAt": 1790445451067,
+    "resolvedAt": 1790445451067,
     "createdBy": "probe",
     "updates": [
       {
@@ -17,6 +17,13 @@
         "status": "investigating",
         "body": "探针自动检测（连续不可达超过一分钟）：Origin server (Jiangsu) unreachable",
         "createdAt": 1790442285855,
+        "createdBy": "probe"
+      },
+      {
+        "id": "bd5fd151-be11-4695-a04d-33064fbe799c",
+        "status": "resolved",
+        "body": "探针恢复：服务已连续可达超过一分钟。",
+        "createdAt": 1790445451067,
         "createdBy": "probe"
       }
     ]
@@ -1630,8 +1637,8 @@
       "admin",
       "survey"
     ],
-    "createdAt": 1790446203535,
-    "updatedAt": 1790446203535,
+    "createdAt": 1790446203529,
+    "updatedAt": 1790446203529,
     "resolvedAt": null,
     "createdBy": "snapshot",
     "updates": [
@@ -1639,7 +1646,7 @@
         "id": "snapshot-origin-unreachable-1",
         "status": "investigating",
         "body": "杭州与弗吉尼亚状态节点均无法拉取。快照保留最近一次成功数据，并将全局状态标为严重中断。",
-        "createdAt": 1790446203535,
+        "createdAt": 1790446203529,
         "createdBy": "snapshot"
       }
     ]
