@@ -1,20 +1,20 @@
 {
-  "overall": "operational",
-  "probedAt": 1790441997059,
-  "edge": "virginia",
+  "overall": "major_outage",
+  "probedAt": 1790442304355,
+  "edge": "hangzhou",
   "components": [
     {
       "id": "passport",
       "group": "products",
       "nameKey": "component.passport",
-      "status": "operational",
+      "status": "major_outage",
       "message": "",
       "origin": {
         "ok": false,
         "latencyMs": null,
         "reason": "Origin server (Jiangsu) unreachable",
-        "edge": "virginia",
-        "probedAt": 1790441997055
+        "edge": "hangzhou",
+        "probedAt": 1790442304355
       }
     },
     {
@@ -24,11 +24,11 @@
       "status": "operational",
       "message": "",
       "origin": {
-        "ok": false,
-        "latencyMs": null,
-        "reason": "Origin server (Jiangsu) unreachable",
-        "edge": "virginia",
-        "probedAt": 1790441997055
+        "ok": true,
+        "latencyMs": 45,
+        "reason": "Origin server (Jiangsu) reachable",
+        "edge": "hangzhou",
+        "probedAt": 1790442303906
       }
     },
     {
@@ -38,11 +38,11 @@
       "status": "operational",
       "message": "",
       "origin": {
-        "ok": false,
-        "latencyMs": null,
-        "reason": "Origin server (Jiangsu) unreachable",
-        "edge": "virginia",
-        "probedAt": 1790441997055
+        "ok": true,
+        "latencyMs": 43,
+        "reason": "Origin server (Jiangsu) reachable",
+        "edge": "hangzhou",
+        "probedAt": 1790442303905
       }
     },
     {
@@ -52,11 +52,11 @@
       "status": "operational",
       "message": "",
       "origin": {
-        "ok": false,
-        "latencyMs": null,
-        "reason": "Origin server (Jiangsu) unreachable",
-        "edge": "virginia",
-        "probedAt": 1790441997055
+        "ok": true,
+        "latencyMs": 46,
+        "reason": "Origin server (Jiangsu) reachable",
+        "edge": "hangzhou",
+        "probedAt": 1790442303908
       }
     },
     {
@@ -66,11 +66,11 @@
       "status": "operational",
       "message": "",
       "origin": {
-        "ok": false,
-        "latencyMs": null,
-        "reason": "Origin server (Jiangsu) unreachable",
-        "edge": "virginia",
-        "probedAt": 1790441997055
+        "ok": true,
+        "latencyMs": 47,
+        "reason": "Origin server (Jiangsu) reachable",
+        "edge": "hangzhou",
+        "probedAt": 1790442303910
       }
     },
     {
@@ -80,11 +80,11 @@
       "status": "operational",
       "message": "",
       "origin": {
-        "ok": false,
-        "latencyMs": null,
-        "reason": "Origin server (Jiangsu) unreachable",
-        "edge": "virginia",
-        "probedAt": 1790441997059
+        "ok": true,
+        "latencyMs": 45,
+        "reason": "Origin server (Jiangsu) reachable",
+        "edge": "hangzhou",
+        "probedAt": 1790442303909
       }
     },
     {
@@ -94,14 +94,37 @@
       "status": "operational",
       "message": "",
       "origin": {
-        "ok": false,
-        "latencyMs": null,
-        "reason": "Origin server (Jiangsu) unreachable",
-        "edge": "virginia",
-        "probedAt": 1790441997059
+        "ok": true,
+        "latencyMs": 42,
+        "reason": "Origin server (Jiangsu) reachable",
+        "edge": "hangzhou",
+        "probedAt": 1790442303907
       }
     }
   ],
-  "incidents": [],
+  "incidents": [
+    {
+      "id": "8f637c80-86fc-464c-a5d5-e0d04cb1109b",
+      "title": "通行账户不可用",
+      "severity": "major",
+      "status": "investigating",
+      "impactComponents": [
+        "passport"
+      ],
+      "createdAt": 1790442285855,
+      "updatedAt": 1790442285855,
+      "resolvedAt": null,
+      "createdBy": "probe",
+      "updates": [
+        {
+          "id": "f8b19c41-aab9-4d96-a5a7-35eb09d9a875",
+          "status": "investigating",
+          "body": "探针自动检测（连续不可达超过一分钟）：Origin server (Jiangsu) unreachable",
+          "createdAt": 1790442285855,
+          "createdBy": "probe"
+        }
+      ]
+    }
+  ],
   "maintenances": []
 }
