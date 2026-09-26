@@ -1,7 +1,7 @@
 {
   "overall": "major_outage",
-  "probedAt": 1790447100582,
-  "edge": "hangzhou",
+  "probedAt": 1790445000249,
+  "edge": "virginia",
   "components": [
     {
       "id": "passport",
@@ -13,114 +13,142 @@
         "ok": false,
         "latencyMs": null,
         "reason": "Origin server (Jiangsu) unreachable",
-        "edge": "hangzhou",
-        "probedAt": 1790447100582
+        "edge": "virginia",
+        "probedAt": 1790445000247
       }
     },
     {
       "id": "develop",
       "group": "products",
       "nameKey": "component.develop",
-      "status": "operational",
+      "status": "major_outage",
       "message": "",
       "origin": {
-        "ok": true,
-        "latencyMs": 44,
-        "reason": "Origin server (Jiangsu) reachable",
-        "edge": "hangzhou",
-        "probedAt": 1790447100206
+        "ok": false,
+        "latencyMs": null,
+        "reason": "Origin server (Jiangsu) unreachable",
+        "edge": "virginia",
+        "probedAt": 1790445000247
       }
     },
     {
       "id": "docs",
       "group": "products",
       "nameKey": "component.docs",
-      "status": "operational",
+      "status": "major_outage",
       "message": "",
       "origin": {
-        "ok": true,
-        "latencyMs": 52,
-        "reason": "Origin server (Jiangsu) reachable",
-        "edge": "hangzhou",
-        "probedAt": 1790447100213
+        "ok": false,
+        "latencyMs": null,
+        "reason": "Origin server (Jiangsu) unreachable",
+        "edge": "virginia",
+        "probedAt": 1790445000247
       }
     },
     {
       "id": "reportaproblem",
       "group": "products",
       "nameKey": "component.reportaproblem",
-      "status": "operational",
+      "status": "major_outage",
       "message": "",
       "origin": {
-        "ok": true,
-        "latencyMs": 42,
-        "reason": "Origin server (Jiangsu) reachable",
-        "edge": "hangzhou",
-        "probedAt": 1790447100204
+        "ok": false,
+        "latencyMs": null,
+        "reason": "Origin server (Jiangsu) unreachable",
+        "edge": "virginia",
+        "probedAt": 1790445000247
       }
     },
     {
       "id": "sitemap",
       "group": "products",
       "nameKey": "component.sitemap",
-      "status": "operational",
+      "status": "major_outage",
       "message": "",
       "origin": {
-        "ok": true,
-        "latencyMs": 41,
-        "reason": "Origin server (Jiangsu) reachable",
-        "edge": "hangzhou",
-        "probedAt": 1790447100205
+        "ok": false,
+        "latencyMs": null,
+        "reason": "Origin server (Jiangsu) unreachable",
+        "edge": "virginia",
+        "probedAt": 1790445000249
       }
     },
     {
       "id": "admin",
       "group": "products",
       "nameKey": "component.admin",
-      "status": "operational",
+      "status": "major_outage",
       "message": "",
       "origin": {
-        "ok": true,
-        "latencyMs": 44,
-        "reason": "Origin server (Jiangsu) reachable",
-        "edge": "hangzhou",
-        "probedAt": 1790447100209
+        "ok": false,
+        "latencyMs": null,
+        "reason": "Origin server (Jiangsu) unreachable",
+        "edge": "virginia",
+        "probedAt": 1790445000248
       }
     },
     {
       "id": "survey",
       "group": "products",
       "nameKey": "component.survey",
-      "status": "operational",
+      "status": "major_outage",
       "message": "",
       "origin": {
-        "ok": true,
-        "latencyMs": 44,
-        "reason": "Origin server (Jiangsu) reachable",
-        "edge": "hangzhou",
-        "probedAt": 1790447100212
+        "ok": false,
+        "latencyMs": null,
+        "reason": "Origin server (Jiangsu) unreachable",
+        "edge": "virginia",
+        "probedAt": 1790445000249
       }
     }
   ],
   "incidents": [
     {
-      "id": "ec49f439-fd88-464d-bfd2-abc5c0c631c4",
+      "id": "snapshot-origin-unreachable",
+      "title": "状态源不可达",
+      "severity": "major",
+      "status": "investigating",
+      "impactComponents": [
+        "passport",
+        "develop",
+        "docs",
+        "reportaproblem",
+        "sitemap",
+        "admin",
+        "survey"
+      ],
+      "createdAt": 1790447401550,
+      "updatedAt": 1790447401550,
+      "resolvedAt": null,
+      "createdBy": "snapshot",
+      "updates": [
+        {
+          "id": "snapshot-origin-unreachable-1",
+          "status": "investigating",
+          "body": "杭州与弗吉尼亚状态节点均无法拉取。快照保留最近一次成功数据，并将全局状态标为严重中断。",
+          "createdAt": 1790447401550,
+          "createdBy": "snapshot"
+        }
+      ]
+    },
+    {
+      "id": "8f637c80-86fc-464c-a5d5-e0d04cb1109b",
       "title": "通行账户不可用",
       "severity": "major",
       "status": "investigating",
       "impactComponents": [
         "passport"
       ],
-      "createdAt": 1790446796905,
-      "updatedAt": 1790446796905,
+      "createdAt": 1790442285855,
+      "updatedAt": 1790442285855,
       "resolvedAt": null,
       "createdBy": "probe",
       "updates": [
         {
-          "id": "371173c7-6c22-4a5a-927c-130a39c859a5",
+          "id": "f8b19c41-aab9-4d96-a5a7-35eb09d9a875",
           "status": "investigating",
           "body": "探针自动检测（连续不可达超过一分钟）：Origin server (Jiangsu) unreachable",
-          "createdAt": 1790446796905,
+          "createdAt": 1790442285855,
           "createdBy": "probe"
         }
       ]
