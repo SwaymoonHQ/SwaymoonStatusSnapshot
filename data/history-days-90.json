@@ -1,13 +1,6 @@
 {
   "days": [
     {
-      "date": "2026-06-29",
-      "startAt": 1782662400000,
-      "endAt": 1782748800000,
-      "level": "ok",
-      "incidents": []
-    },
-    {
       "date": "2026-06-30",
       "startAt": 1782748800000,
       "endAt": 1782835200000,
@@ -1147,6 +1140,24 @@
         {
           "id": "1c26ac04-0ded-418d-9e3f-f9a53e7d9015",
           "title": "通行账户不可用",
+          "severity": "major"
+        }
+      ]
+    },
+    {
+      "date": "2026-09-27",
+      "startAt": 1790438400000,
+      "endAt": 1790524800000,
+      "level": "major",
+      "incidents": [
+        {
+          "id": "3dadac7c-b4b9-4943-beb8-38dd47c6a236",
+          "title": "边缘节点（杭州）宕机事故",
+          "severity": "major"
+        },
+        {
+          "id": "97d0aa74-65cc-4af3-a5ac-e224676a8938",
+          "title": "边缘节点（杭州）宕机事故",
           "severity": "major"
         }
       ]
