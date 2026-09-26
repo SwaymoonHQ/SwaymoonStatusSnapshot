@@ -1,20 +1,20 @@
 {
-  "overall": "major_outage",
-  "probedAt": 1790433596168,
+  "overall": "operational",
+  "probedAt": 1790433900495,
   "edge": "virginia",
   "components": [
     {
       "id": "passport",
       "group": "products",
       "nameKey": "component.passport",
-      "status": "major_outage",
+      "status": "operational",
       "message": "",
       "origin": {
         "ok": false,
         "latencyMs": null,
         "reason": "Origin server (Jiangsu) unreachable",
         "edge": "virginia",
-        "probedAt": 1790433596164
+        "probedAt": 1790433900491
       }
     },
     {
@@ -28,7 +28,7 @@
         "latencyMs": null,
         "reason": "Origin server (Jiangsu) unreachable",
         "edge": "virginia",
-        "probedAt": 1790433596165
+        "probedAt": 1790433900491
       }
     },
     {
@@ -42,7 +42,7 @@
         "latencyMs": null,
         "reason": "Origin server (Jiangsu) unreachable",
         "edge": "virginia",
-        "probedAt": 1790433596165
+        "probedAt": 1790433900494
       }
     },
     {
@@ -56,7 +56,7 @@
         "latencyMs": null,
         "reason": "Origin server (Jiangsu) unreachable",
         "edge": "virginia",
-        "probedAt": 1790433596167
+        "probedAt": 1790433900494
       }
     },
     {
@@ -70,7 +70,7 @@
         "latencyMs": null,
         "reason": "Origin server (Jiangsu) unreachable",
         "edge": "virginia",
-        "probedAt": 1790433596167
+        "probedAt": 1790433900494
       }
     },
     {
@@ -84,7 +84,7 @@
         "latencyMs": null,
         "reason": "Origin server (Jiangsu) unreachable",
         "edge": "virginia",
-        "probedAt": 1790433596168
+        "probedAt": 1790433900494
       }
     },
     {
@@ -98,33 +98,10 @@
         "latencyMs": null,
         "reason": "Origin server (Jiangsu) unreachable",
         "edge": "virginia",
-        "probedAt": 1790433596167
+        "probedAt": 1790433900495
       }
     }
   ],
-  "incidents": [
-    {
-      "id": "1c26ac04-0ded-418d-9e3f-f9a53e7d9015",
-      "title": "通行账户不可用",
-      "severity": "major",
-      "status": "investigating",
-      "impactComponents": [
-        "passport"
-      ],
-      "createdAt": 1790433374052,
-      "updatedAt": 1790433374052,
-      "resolvedAt": null,
-      "createdBy": "probe",
-      "updates": [
-        {
-          "id": "fd5605fb-aaac-4be7-a43e-f5ef3efeca9a",
-          "status": "investigating",
-          "body": "探针自动检测（连续不可达超过一分钟）：Origin server (Jiangsu) unreachable",
-          "createdAt": 1790433374052,
-          "createdBy": "probe"
-        }
-      ]
-    }
-  ],
+  "incidents": [],
   "maintenances": []
 }

@@ -4,13 +4,13 @@
       "id": "1c26ac04-0ded-418d-9e3f-f9a53e7d9015",
       "title": "通行账户不可用",
       "severity": "major",
-      "status": "investigating",
+      "status": "resolved",
       "impactComponents": [
         "passport"
       ],
       "createdAt": 1790433374052,
-      "updatedAt": 1790433374052,
-      "resolvedAt": null,
+      "updatedAt": 1790433821356,
+      "resolvedAt": 1790433821356,
       "createdBy": "probe",
       "updates": [
         {
@@ -18,6 +18,13 @@
           "status": "investigating",
           "body": "探针自动检测（连续不可达超过一分钟）：Origin server (Jiangsu) unreachable",
           "createdAt": 1790433374052,
+          "createdBy": "probe"
+        },
+        {
+          "id": "2c83f39b-26bb-4545-a692-615ec3a8b6b0",
+          "status": "resolved",
+          "body": "探针恢复：服务已连续可达超过一分钟。",
+          "createdAt": 1790433821356,
           "createdBy": "probe"
         }
       ]
