@@ -1,6 +1,6 @@
 {
   "overall": "major_outage",
-  "probedAt": 1790875202243,
+  "probedAt": 1790875802830,
   "edge": "virginia",
   "components": [
     {
@@ -14,7 +14,7 @@
         "latencyMs": null,
         "reason": "Origin server (Jiangsu) unreachable",
         "edge": "virginia",
-        "probedAt": 1790875202238
+        "probedAt": 1790875802827
       }
     },
     {
@@ -28,7 +28,7 @@
         "latencyMs": null,
         "reason": "Origin server (Jiangsu) unreachable",
         "edge": "virginia",
-        "probedAt": 1790875202242
+        "probedAt": 1790875802827
       }
     },
     {
@@ -42,7 +42,7 @@
         "latencyMs": null,
         "reason": "Origin server (Jiangsu) unreachable",
         "edge": "virginia",
-        "probedAt": 1790875202243
+        "probedAt": 1790875802826
       }
     },
     {
@@ -56,7 +56,7 @@
         "latencyMs": null,
         "reason": "Origin server (Jiangsu) unreachable",
         "edge": "virginia",
-        "probedAt": 1790875202243
+        "probedAt": 1790875802830
       }
     },
     {
@@ -70,7 +70,7 @@
         "latencyMs": null,
         "reason": "Origin server (Jiangsu) unreachable",
         "edge": "virginia",
-        "probedAt": 1790875202243
+        "probedAt": 1790875802830
       }
     },
     {
@@ -84,7 +84,7 @@
         "latencyMs": null,
         "reason": "Origin server (Jiangsu) unreachable",
         "edge": "virginia",
-        "probedAt": 1790875202243
+        "probedAt": 1790875802830
       }
     },
     {
@@ -98,7 +98,7 @@
         "latencyMs": null,
         "reason": "Origin server (Jiangsu) unreachable",
         "edge": "virginia",
-        "probedAt": 1790875202242
+        "probedAt": 1790875802830
       }
     }
   ],
@@ -117,8 +117,8 @@
         "admin",
         "survey"
       ],
-      "createdAt": 1790876101630,
-      "updatedAt": 1790876101630,
+      "createdAt": 1790876103550,
+      "updatedAt": 1790876103550,
       "resolvedAt": null,
       "createdBy": "snapshot",
       "updates": [
@@ -126,7 +126,7 @@
           "id": "snapshot-origin-unreachable-1",
           "status": "investigating",
           "body": "杭州与弗吉尼亚状态节点均无法拉取。快照保留最近一次成功数据，并将全局状态标为严重中断。",
-          "createdAt": 1790876101630,
+          "createdAt": 1790876103550,
           "createdBy": "snapshot"
         }
       ]
