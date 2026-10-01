@@ -1,9 +1,13 @@
 {
-  "generatedAt": 1790886900559,
-  "generatedAtIso": "2026-10-01T20:35:48Z",
-  "source": "https://status.swaymoon.com",
+  "generatedAt": 1790887201105,
+  "generatedAtIso": "2026-10-01T20:40:02Z",
+  "source": "",
   "liveOrigin": "https://status.swaymoon.com",
-  "stale": false,
-  "originUnreachable": false,
-  "fetchErrors": []
+  "stale": true,
+  "originUnreachable": true,
+  "fetchErrors": [
+    "https://status.swaymoon.com/api/v1/summary: <urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: certificate has expired (_ssl.c:1029)>",
+    "https://status-va.swaymoon.com/api/v1/summary: <urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: certificate has expired (_ssl.c:1029)>",
+    "https://status-hz.swaymoon.com/api/v1/summary: <urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: certificate has expired (_ssl.c:1029)>"
+  ]
 }
