@@ -1,21 +1,13 @@
 {
-  "generatedAt": 1790905501513,
-  "generatedAtIso": "2026-10-02T01:45:46Z",
-  "source": "https://status.swaymoon.com",
+  "generatedAt": 1790905803566,
+  "generatedAtIso": "2026-10-02T01:50:04Z",
+  "source": "",
   "liveOrigin": "https://status.swaymoon.com",
   "stale": true,
-  "originUnreachable": false,
+  "originUnreachable": true,
   "fetchErrors": [
-    "/api/v1/incidents/aee788e8-52fc-47b5-bde2-e76bb1f8af3f: <urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: certificate has expired (_ssl.c:1029)>",
-    "/api/v1/incidents/736e5b65-3ba2-42db-bf37-1bb7ad72912a: <urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: certificate has expired (_ssl.c:1029)>",
-    "/api/v1/incidents/82f4c40e-b6dc-4ffb-90e4-fd0bf15bf596: <urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: certificate has expired (_ssl.c:1029)>",
-    "/api/v1/incidents/c2adca22-3092-4082-ab5f-3d6031ab05c1: <urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: certificate has expired (_ssl.c:1029)>",
-    "/api/v1/incidents/0c35bce7-c668-4340-a1ef-a2c9c9c826a5: <urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: certificate has expired (_ssl.c:1029)>",
-    "/api/v1/incidents/4e9bcea1-0a7a-4f5c-8e3e-71534a941663: <urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: certificate has expired (_ssl.c:1029)>",
-    "/api/v1/incidents/9fb88c98-581b-47dc-82c2-5977de707476: <urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: certificate has expired (_ssl.c:1029)>",
-    "/api/v1/incidents/0328dc7e-f7db-4a91-92c7-8aa4c655eba0: <urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: certificate has expired (_ssl.c:1029)>",
-    "/api/v1/incidents/b3470115-c115-421c-b80d-744207c0b2be: <urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: certificate has expired (_ssl.c:1029)>",
-    "/api/v1/incidents/7d43e794-de05-4ed4-9832-01def41d6f45: <urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: certificate has expired (_ssl.c:1029)>",
-    "/api/v1/incidents/80ede5af-eaec-43fe-b8d5-c01641b5155c: <urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: certificate has expired (_ssl.c:1029)>"
+    "https://status.swaymoon.com/api/v1/summary: <urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: certificate has expired (_ssl.c:1029)>",
+    "https://status-va.swaymoon.com/api/v1/summary: <urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: certificate has expired (_ssl.c:1029)>",
+    "https://status-hz.swaymoon.com/api/v1/summary: <urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: certificate has expired (_ssl.c:1029)>"
   ]
 }
