@@ -1,6 +1,6 @@
 {
   "overall": "major_outage",
-  "probedAt": 1790944502195,
+  "probedAt": 1790944799917,
   "edge": "hangzhou",
   "components": [
     {
@@ -10,11 +10,11 @@
       "status": "major_outage",
       "message": "",
       "origin": {
-        "ok": false,
-        "latencyMs": null,
-        "reason": "Origin server (Jiangsu) unreachable",
+        "ok": true,
+        "latencyMs": 77,
+        "reason": "Origin server (Jiangsu) reachable",
         "edge": "hangzhou",
-        "probedAt": 1790944502195
+        "probedAt": 1790944799917
       }
     },
     {
@@ -25,10 +25,10 @@
       "message": "",
       "origin": {
         "ok": true,
-        "latencyMs": 38,
+        "latencyMs": 39,
         "reason": "Origin server (Jiangsu) reachable",
         "edge": "hangzhou",
-        "probedAt": 1790944501552
+        "probedAt": 1790944799880
       }
     },
     {
@@ -42,7 +42,7 @@
         "latencyMs": 38,
         "reason": "Origin server (Jiangsu) reachable",
         "edge": "hangzhou",
-        "probedAt": 1790944501553
+        "probedAt": 1790944799882
       }
     },
     {
@@ -56,7 +56,7 @@
         "latencyMs": 38,
         "reason": "Origin server (Jiangsu) reachable",
         "edge": "hangzhou",
-        "probedAt": 1790944501553
+        "probedAt": 1790944799882
       }
     },
     {
@@ -67,10 +67,10 @@
       "message": "",
       "origin": {
         "ok": true,
-        "latencyMs": 40,
+        "latencyMs": 39,
         "reason": "Origin server (Jiangsu) reachable",
         "edge": "hangzhou",
-        "probedAt": 1790944501555
+        "probedAt": 1790944799885
       }
     },
     {
@@ -84,7 +84,7 @@
         "latencyMs": 39,
         "reason": "Origin server (Jiangsu) reachable",
         "edge": "hangzhou",
-        "probedAt": 1790944501556
+        "probedAt": 1790944799885
       }
     },
     {
@@ -98,7 +98,7 @@
         "latencyMs": 37,
         "reason": "Origin server (Jiangsu) reachable",
         "edge": "hangzhou",
-        "probedAt": 1790944501555
+        "probedAt": 1790944799884
       }
     }
   ],
