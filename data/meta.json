@@ -1,12 +1,12 @@
 {
-  "generatedAt": 1790904901559,
-  "generatedAtIso": "2026-10-02T01:35:20Z",
-  "source": "https://status.swaymoon.com",
+  "generatedAt": 1790904904793,
+  "generatedAtIso": "2026-10-02T01:35:50Z",
+  "source": "https://status-va.swaymoon.com",
   "liveOrigin": "https://status.swaymoon.com",
   "stale": true,
   "originUnreachable": false,
   "fetchErrors": [
-    "/api/v1/incidents/aee788e8-52fc-47b5-bde2-e76bb1f8af3f: <urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: certificate has expired (_ssl.c:1029)>",
+    "https://status.swaymoon.com/api/v1/summary: <urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: certificate has expired (_ssl.c:1029)>",
     "/api/v1/incidents/736e5b65-3ba2-42db-bf37-1bb7ad72912a: <urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: certificate has expired (_ssl.c:1029)>",
     "/api/v1/incidents/82f4c40e-b6dc-4ffb-90e4-fd0bf15bf596: <urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: certificate has expired (_ssl.c:1029)>",
     "/api/v1/incidents/c2adca22-3092-4082-ab5f-3d6031ab05c1: <urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: certificate has expired (_ssl.c:1029)>",
@@ -86,6 +86,6 @@
     "/api/v1/incidents/c06d7dbe-8b42-4f74-97a1-165fc55ef084: <urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: certificate has expired (_ssl.c:1029)>",
     "/api/v1/incidents/359f86a2-3c72-4ed7-a66f-8d6185f6854b: <urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: certificate has expired (_ssl.c:1029)>",
     "/api/v1/incidents/48039488-6ff6-447a-adb3-03be2237bdb6: <urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: certificate has expired (_ssl.c:1029)>",
-    "https://status.swaymoon.com/api/v1/history/days?days=90: <urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: certificate has expired (_ssl.c:1029)>"
+    "https://status-va.swaymoon.com/api/v1/history/days?days=90: <urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: certificate has expired (_ssl.c:1029)>"
   ]
 }
