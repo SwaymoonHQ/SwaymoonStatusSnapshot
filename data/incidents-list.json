@@ -1,6 +1,35 @@
 {
   "incidents": [
     {
+      "id": "82f4c40e-b6dc-4ffb-90e4-fd0bf15bf596",
+      "title": "通行账户不可用",
+      "severity": "major",
+      "status": "resolved",
+      "impactComponents": [
+        "passport"
+      ],
+      "createdAt": 1790594955674,
+      "updatedAt": 1790945126529,
+      "resolvedAt": 1790945126529,
+      "createdBy": "probe",
+      "updates": [
+        {
+          "id": "9498708b-a809-4486-94ed-c1f37f0f30bb",
+          "status": "investigating",
+          "body": "探针自动检测（连续不可达超过一分钟）：Origin server (Jiangsu) unreachable",
+          "createdAt": 1790594955674,
+          "createdBy": "probe"
+        },
+        {
+          "id": "71e4b63a-aa0e-4dc1-a87f-1dc7ff497ace",
+          "status": "resolved",
+          "body": "探针恢复：服务已连续可达超过一分钟。",
+          "createdAt": 1790945126529,
+          "createdBy": "probe"
+        }
+      ]
+    },
+    {
       "id": "c1b259e7-be1d-464d-89d5-b7c8dfcd607a",
       "title": "开发者门户不可用",
       "severity": "major",
@@ -170,28 +199,6 @@
           "status": "resolved",
           "body": "探针恢复：服务已连续可达超过一分钟。",
           "createdAt": 1790819094277,
-          "createdBy": "probe"
-        }
-      ]
-    },
-    {
-      "id": "82f4c40e-b6dc-4ffb-90e4-fd0bf15bf596",
-      "title": "通行账户不可用",
-      "severity": "major",
-      "status": "investigating",
-      "impactComponents": [
-        "passport"
-      ],
-      "createdAt": 1790594955674,
-      "updatedAt": 1790594955674,
-      "resolvedAt": null,
-      "createdBy": "probe",
-      "updates": [
-        {
-          "id": "9498708b-a809-4486-94ed-c1f37f0f30bb",
-          "status": "investigating",
-          "body": "探针自动检测（连续不可达超过一分钟）：Origin server (Jiangsu) unreachable",
-          "createdAt": 1790594955674,
           "createdBy": "probe"
         }
       ]
