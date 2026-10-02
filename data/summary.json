@@ -1,136 +1,107 @@
 {
-  "overall": "major_outage",
-  "probedAt": 1790954702826,
+  "overall": "operational",
+  "probedAt": 1790955002615,
   "edge": "hangzhou",
   "components": [
     {
       "id": "passport",
       "group": "products",
       "nameKey": "component.passport",
-      "status": "major_outage",
+      "status": "operational",
       "message": "",
       "origin": {
         "ok": true,
-        "latencyMs": 75,
+        "latencyMs": 69,
         "reason": "Origin server (Jiangsu) reachable",
         "edge": "hangzhou",
-        "probedAt": 1790954702826
+        "probedAt": 1790955002615
       }
     },
     {
       "id": "develop",
       "group": "products",
       "nameKey": "component.develop",
-      "status": "major_outage",
+      "status": "operational",
       "message": "",
       "origin": {
         "ok": true,
-        "latencyMs": 38,
+        "latencyMs": 37,
         "reason": "Origin server (Jiangsu) reachable",
         "edge": "hangzhou",
-        "probedAt": 1790954702790
+        "probedAt": 1790955002583
       }
     },
     {
       "id": "docs",
       "group": "products",
       "nameKey": "component.docs",
-      "status": "major_outage",
+      "status": "operational",
       "message": "",
       "origin": {
         "ok": true,
-        "latencyMs": 41,
+        "latencyMs": 40,
         "reason": "Origin server (Jiangsu) reachable",
         "edge": "hangzhou",
-        "probedAt": 1790954702794
+        "probedAt": 1790955002587
       }
     },
     {
       "id": "reportaproblem",
       "group": "products",
       "nameKey": "component.reportaproblem",
-      "status": "major_outage",
+      "status": "operational",
       "message": "",
       "origin": {
         "ok": true,
-        "latencyMs": 40,
+        "latencyMs": 38,
         "reason": "Origin server (Jiangsu) reachable",
         "edge": "hangzhou",
-        "probedAt": 1790954702792
+        "probedAt": 1790955002586
       }
     },
     {
       "id": "sitemap",
       "group": "products",
       "nameKey": "component.sitemap",
-      "status": "major_outage",
+      "status": "operational",
       "message": "",
       "origin": {
         "ok": true,
-        "latencyMs": 42,
+        "latencyMs": 39,
         "reason": "Origin server (Jiangsu) reachable",
         "edge": "hangzhou",
-        "probedAt": 1790954702796
+        "probedAt": 1790955002587
       }
     },
     {
       "id": "admin",
       "group": "products",
       "nameKey": "component.admin",
-      "status": "major_outage",
+      "status": "operational",
       "message": "",
       "origin": {
         "ok": true,
-        "latencyMs": 40,
+        "latencyMs": 38,
         "reason": "Origin server (Jiangsu) reachable",
         "edge": "hangzhou",
-        "probedAt": 1790954702798
+        "probedAt": 1790955002587
       }
     },
     {
       "id": "survey",
       "group": "products",
       "nameKey": "component.survey",
-      "status": "major_outage",
+      "status": "operational",
       "message": "",
       "origin": {
         "ok": true,
-        "latencyMs": 41,
+        "latencyMs": 37,
         "reason": "Origin server (Jiangsu) reachable",
         "edge": "hangzhou",
-        "probedAt": 1790954702796
+        "probedAt": 1790955002587
       }
     }
   ],
-  "incidents": [
-    {
-      "id": "snapshot-origin-unreachable",
-      "title": "状态源不可达",
-      "severity": "major",
-      "status": "investigating",
-      "impactComponents": [
-        "passport",
-        "develop",
-        "docs",
-        "reportaproblem",
-        "sitemap",
-        "admin",
-        "survey"
-      ],
-      "createdAt": 1790955003485,
-      "updatedAt": 1790955003485,
-      "resolvedAt": null,
-      "createdBy": "snapshot",
-      "updates": [
-        {
-          "id": "snapshot-origin-unreachable-1",
-          "status": "investigating",
-          "body": "杭州与弗吉尼亚状态节点均无法拉取。快照保留最近一次成功数据，并将全局状态标为严重中断。",
-          "createdAt": 1790955003485,
-          "createdBy": "snapshot"
-        }
-      ]
-    }
-  ],
+  "incidents": [],
   "maintenances": []
 }
