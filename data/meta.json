@@ -1,13 +1,11 @@
 {
-  "generatedAt": 1790922904793,
-  "generatedAtIso": "2026-10-02T06:35:08Z",
-  "source": "",
+  "generatedAt": 1790922901527,
+  "generatedAtIso": "2026-10-02T06:36:19Z",
+  "source": "https://status.swaymoon.com",
   "liveOrigin": "https://status.swaymoon.com",
   "stale": true,
-  "originUnreachable": true,
+  "originUnreachable": false,
   "fetchErrors": [
-    "https://status.swaymoon.com/api/v1/summary: <urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: certificate has expired (_ssl.c:1029)>",
-    "https://status-va.swaymoon.com/api/v1/summary: <urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: certificate has expired (_ssl.c:1029)>",
-    "https://status-hz.swaymoon.com/api/v1/summary: <urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: certificate has expired (_ssl.c:1029)>"
+    "/api/v1/incidents/9fb88c98-581b-47dc-82c2-5977de707476: HTTP Error 502: Bad Gateway"
   ]
 }
