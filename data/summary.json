@@ -1,262 +1,107 @@
 {
-  "overall": "major_outage",
-  "probedAt": 1792406101124,
+  "overall": "operational",
+  "probedAt": 1792406396671,
   "edge": "hangzhou",
   "components": [
     {
       "id": "passport",
       "group": "products",
       "nameKey": "component.passport",
-      "status": "major_outage",
+      "status": "operational",
       "message": "",
       "origin": {
         "ok": true,
-        "latencyMs": 130,
+        "latencyMs": 108,
         "reason": "Origin server (Jiangsu) reachable",
         "edge": "hangzhou",
-        "probedAt": 1792406101124
+        "probedAt": 1792406396671
       }
     },
     {
       "id": "develop",
       "group": "products",
       "nameKey": "component.develop",
-      "status": "major_outage",
+      "status": "operational",
       "message": "",
       "origin": {
         "ok": true,
-        "latencyMs": 90,
+        "latencyMs": 49,
         "reason": "Origin server (Jiangsu) reachable",
         "edge": "hangzhou",
-        "probedAt": 1792406101087
+        "probedAt": 1792406396612
       }
     },
     {
       "id": "docs",
       "group": "products",
       "nameKey": "component.docs",
-      "status": "major_outage",
+      "status": "operational",
       "message": "",
       "origin": {
         "ok": true,
-        "latencyMs": 92,
+        "latencyMs": 50,
         "reason": "Origin server (Jiangsu) reachable",
         "edge": "hangzhou",
-        "probedAt": 1792406101087
+        "probedAt": 1792406396615
       }
     },
     {
       "id": "reportaproblem",
       "group": "products",
       "nameKey": "component.reportaproblem",
-      "status": "major_outage",
+      "status": "operational",
       "message": "",
       "origin": {
         "ok": true,
-        "latencyMs": 90,
+        "latencyMs": 49,
         "reason": "Origin server (Jiangsu) reachable",
         "edge": "hangzhou",
-        "probedAt": 1792406101085
+        "probedAt": 1792406396614
       }
     },
     {
       "id": "sitemap",
       "group": "products",
       "nameKey": "component.sitemap",
-      "status": "major_outage",
+      "status": "operational",
       "message": "",
       "origin": {
         "ok": true,
-        "latencyMs": 90,
+        "latencyMs": 48,
         "reason": "Origin server (Jiangsu) reachable",
         "edge": "hangzhou",
-        "probedAt": 1792406101085
+        "probedAt": 1792406396615
       }
     },
     {
       "id": "admin",
       "group": "products",
       "nameKey": "component.admin",
-      "status": "major_outage",
+      "status": "operational",
       "message": "",
       "origin": {
         "ok": true,
-        "latencyMs": 90,
+        "latencyMs": 48,
         "reason": "Origin server (Jiangsu) reachable",
         "edge": "hangzhou",
-        "probedAt": 1792406101087
+        "probedAt": 1792406396614
       }
     },
     {
       "id": "survey",
       "group": "products",
       "nameKey": "component.survey",
-      "status": "major_outage",
+      "status": "operational",
       "message": "",
       "origin": {
         "ok": true,
-        "latencyMs": 90,
+        "latencyMs": 49,
         "reason": "Origin server (Jiangsu) reachable",
         "edge": "hangzhou",
-        "probedAt": 1792406101087
+        "probedAt": 1792406396615
       }
     }
   ],
-  "incidents": [
-    {
-      "id": "db7e0ee7-a6cf-4989-b73e-7d3ecac3c2cc",
-      "title": "通行账户不可用",
-      "severity": "major",
-      "status": "investigating",
-      "impactComponents": [
-        "passport"
-      ],
-      "createdAt": 1792405997632,
-      "updatedAt": 1792405997632,
-      "resolvedAt": null,
-      "createdBy": "probe",
-      "updates": [
-        {
-          "id": "eb68de5a-9576-4e9d-bcd6-fc3a35bce968",
-          "status": "investigating",
-          "body": "探针自动检测（连续不可达超过一分钟）：Origin server (Jiangsu) unreachable",
-          "createdAt": 1792405997632,
-          "createdBy": "probe"
-        }
-      ]
-    },
-    {
-      "id": "0076c237-a765-4f00-9d38-8fc42ee3d456",
-      "title": "开发者门户不可用",
-      "severity": "major",
-      "status": "investigating",
-      "impactComponents": [
-        "develop"
-      ],
-      "createdAt": 1792405997632,
-      "updatedAt": 1792405997632,
-      "resolvedAt": null,
-      "createdBy": "probe",
-      "updates": [
-        {
-          "id": "08ea5722-6f41-4db7-b929-5ce4a58239df",
-          "status": "investigating",
-          "body": "探针自动检测（连续不可达超过一分钟）：Origin server (Jiangsu) unreachable",
-          "createdAt": 1792405997632,
-          "createdBy": "probe"
-        }
-      ]
-    },
-    {
-      "id": "2d964461-d0fd-4313-a76e-a54c4192c136",
-      "title": "文档中心不可用",
-      "severity": "major",
-      "status": "investigating",
-      "impactComponents": [
-        "docs"
-      ],
-      "createdAt": 1792405997632,
-      "updatedAt": 1792405997632,
-      "resolvedAt": null,
-      "createdBy": "probe",
-      "updates": [
-        {
-          "id": "ff6089e5-5960-4e07-ba6e-902e2b1533c4",
-          "status": "investigating",
-          "body": "探针自动检测（连续不可达超过一分钟）：Origin server (Jiangsu) unreachable",
-          "createdAt": 1792405997632,
-          "createdBy": "probe"
-        }
-      ]
-    },
-    {
-      "id": "f2bb940d-ec19-4e34-82c5-7088623a8673",
-      "title": "报告问题门户不可用",
-      "severity": "major",
-      "status": "investigating",
-      "impactComponents": [
-        "reportaproblem"
-      ],
-      "createdAt": 1792405997632,
-      "updatedAt": 1792405997632,
-      "resolvedAt": null,
-      "createdBy": "probe",
-      "updates": [
-        {
-          "id": "3a842413-28f6-491b-bfeb-39a15563152a",
-          "status": "investigating",
-          "body": "探针自动检测（连续不可达超过一分钟）：Origin server (Jiangsu) unreachable",
-          "createdAt": 1792405997632,
-          "createdBy": "probe"
-        }
-      ]
-    },
-    {
-      "id": "16d2657a-03d0-4e63-84c5-d949151f729d",
-      "title": "网页地图不可用",
-      "severity": "major",
-      "status": "investigating",
-      "impactComponents": [
-        "sitemap"
-      ],
-      "createdAt": 1792405997632,
-      "updatedAt": 1792405997632,
-      "resolvedAt": null,
-      "createdBy": "probe",
-      "updates": [
-        {
-          "id": "0f75f8fd-6a38-43e1-98c0-31e5c5a3f57f",
-          "status": "investigating",
-          "body": "探针自动检测（连续不可达超过一分钟）：Origin server (Jiangsu) unreachable",
-          "createdAt": 1792405997632,
-          "createdBy": "probe"
-        }
-      ]
-    },
-    {
-      "id": "b85bdda9-b8d9-4fbc-96a0-3c67de5f6058",
-      "title": "管理台不可用",
-      "severity": "major",
-      "status": "investigating",
-      "impactComponents": [
-        "admin"
-      ],
-      "createdAt": 1792405997632,
-      "updatedAt": 1792405997632,
-      "resolvedAt": null,
-      "createdBy": "probe",
-      "updates": [
-        {
-          "id": "36917cb4-14f8-4e3e-8747-b07f33ccfeda",
-          "status": "investigating",
-          "body": "探针自动检测（连续不可达超过一分钟）：Origin server (Jiangsu) unreachable",
-          "createdAt": 1792405997632,
-          "createdBy": "probe"
-        }
-      ]
-    },
-    {
-      "id": "a7cebd39-8d29-4a13-9ce7-5988838c0ef3",
-      "title": "问卷不可用",
-      "severity": "major",
-      "status": "investigating",
-      "impactComponents": [
-        "survey"
-      ],
-      "createdAt": 1792405997632,
-      "updatedAt": 1792405997632,
-      "resolvedAt": null,
-      "createdBy": "probe",
-      "updates": [
-        {
-          "id": "c0d7c213-8caa-4c5d-ad71-655b1c415d3d",
-          "status": "investigating",
-          "body": "探针自动检测（连续不可达超过一分钟）：Origin server (Jiangsu) unreachable",
-          "createdAt": 1792405997632,
-          "createdBy": "probe"
-        }
-      ]
-    }
-  ],
+  "incidents": [],
   "maintenances": []
 }
