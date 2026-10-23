@@ -1,6 +1,28 @@
 {
   "incidents": [
     {
+      "id": "ae57c4b5-7a2b-4d3e-b0d3-19b4b785aee7",
+      "title": "通行账户不可用",
+      "severity": "major",
+      "status": "investigating",
+      "impactComponents": [
+        "passport"
+      ],
+      "createdAt": 1792738365480,
+      "updatedAt": 1792738365480,
+      "resolvedAt": null,
+      "createdBy": "probe",
+      "updates": [
+        {
+          "id": "632295e5-8ad2-4871-9948-841e84e26a81",
+          "status": "investigating",
+          "body": "探针自动检测（连续不可达超过一分钟）：Origin server (Jiangsu) unreachable",
+          "createdAt": 1792738365480,
+          "createdBy": "probe"
+        }
+      ]
+    },
+    {
       "id": "b95e3db0-119d-4a5b-b874-dc6b6fefe1af",
       "title": "通行账户不可用",
       "severity": "major",
@@ -2864,35 +2886,6 @@
         },
         {
           "id": "43b30d12-3170-4f41-901c-935a542efe3d",
-          "status": "resolved",
-          "body": "探针恢复：服务已连续可达超过一分钟。",
-          "createdAt": 1789237626595,
-          "createdBy": "probe"
-        }
-      ]
-    },
-    {
-      "id": "b4b9fe87-18bb-48f2-a793-c5f6f9d3a7ed",
-      "title": "管理台不可用",
-      "severity": "major",
-      "status": "resolved",
-      "impactComponents": [
-        "admin"
-      ],
-      "createdAt": 1789237510876,
-      "updatedAt": 1789237626595,
-      "resolvedAt": 1789237626595,
-      "createdBy": "probe",
-      "updates": [
-        {
-          "id": "2ae85ed7-4aab-4b78-a132-69fe1ef4229a",
-          "status": "investigating",
-          "body": "探针自动检测（连续不可达超过一分钟）：Origin server (Jiangsu) unreachable",
-          "createdAt": 1789237510876,
-          "createdBy": "probe"
-        },
-        {
-          "id": "56cf6a57-1b88-4ef3-ba6e-6efc8e966d7f",
           "status": "resolved",
           "body": "探针恢复：服务已连续可达超过一分钟。",
           "createdAt": 1789237626595,
