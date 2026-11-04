@@ -1,13 +1,6 @@
 {
   "days": [
     {
-      "date": "2026-08-07",
-      "startAt": 1786032000000,
-      "endAt": 1786118400000,
-      "level": "ok",
-      "incidents": []
-    },
-    {
       "date": "2026-08-08",
       "startAt": 1786118400000,
       "endAt": 1786204800000,
@@ -2421,6 +2414,24 @@
       "date": "2026-11-04",
       "startAt": 1793721600000,
       "endAt": 1793808000000,
+      "level": "major",
+      "incidents": [
+        {
+          "id": "3dadac7c-b4b9-4943-beb8-38dd47c6a236",
+          "title": "边缘节点（杭州）宕机事故",
+          "severity": "major"
+        },
+        {
+          "id": "97d0aa74-65cc-4af3-a5ac-e224676a8938",
+          "title": "边缘节点（杭州）宕机事故",
+          "severity": "major"
+        }
+      ]
+    },
+    {
+      "date": "2026-11-05",
+      "startAt": 1793808000000,
+      "endAt": 1793894400000,
       "level": "major",
       "incidents": [
         {
