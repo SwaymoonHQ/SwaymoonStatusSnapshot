@@ -1,15 +1,44 @@
 {
+  "ca650f48-d109-4c1b-9ecf-09d02001915e": {
+    "id": "ca650f48-d109-4c1b-9ecf-09d02001915e",
+    "title": "网页地图不可用",
+    "severity": "major",
+    "status": "resolved",
+    "impactComponents": [
+      "sitemap"
+    ],
+    "createdAt": 1794233191302,
+    "updatedAt": 1794233444445,
+    "resolvedAt": 1794233444445,
+    "createdBy": "probe",
+    "updates": [
+      {
+        "id": "d86b3652-4f63-4c98-b8a8-775bd92d0dbd",
+        "status": "investigating",
+        "body": "探针自动检测（连续不可达超过一分钟）：Origin server (Jiangsu) unreachable",
+        "createdAt": 1794233191302,
+        "createdBy": "probe"
+      },
+      {
+        "id": "e852d40a-7f8e-4798-b15d-ab4eff0a1978",
+        "status": "resolved",
+        "body": "探针恢复：服务已连续可达超过一分钟。",
+        "createdAt": 1794233444445,
+        "createdBy": "probe"
+      }
+    ]
+  },
   "246fdb10-f20e-43ff-949d-499b8b87cd20": {
     "id": "246fdb10-f20e-43ff-949d-499b8b87cd20",
     "title": "通行账户不可用",
     "severity": "major",
-    "status": "investigating",
+    "status": "resolved",
     "impactComponents": [
       "passport"
     ],
     "createdAt": 1794233191302,
-    "updatedAt": 1794233191302,
-    "resolvedAt": null,
+    "updatedAt": 1794233407449,
+    "resolvedAt": 1794233407449,
     "createdBy": "probe",
     "updates": [
       {
@@ -18,27 +47,12 @@
         "body": "探针自动检测（连续不可达超过一分钟）：Origin server (Jiangsu) unreachable",
         "createdAt": 1794233191302,
         "createdBy": "probe"
-      }
-    ]
-  },
-  "ca650f48-d109-4c1b-9ecf-09d02001915e": {
-    "id": "ca650f48-d109-4c1b-9ecf-09d02001915e",
-    "title": "网页地图不可用",
-    "severity": "major",
-    "status": "investigating",
-    "impactComponents": [
-      "sitemap"
-    ],
-    "createdAt": 1794233191302,
-    "updatedAt": 1794233191302,
-    "resolvedAt": null,
-    "createdBy": "probe",
-    "updates": [
+      },
       {
-        "id": "d86b3652-4f63-4c98-b8a8-775bd92d0dbd",
-        "status": "investigating",
-        "body": "探针自动检测（连续不可达超过一分钟）：Origin server (Jiangsu) unreachable",
-        "createdAt": 1794233191302,
+        "id": "2a05b548-5bb8-422f-9fae-81800ceb7052",
+        "status": "resolved",
+        "body": "探针恢复：服务已连续可达超过一分钟。",
+        "createdAt": 1794233407449,
         "createdBy": "probe"
       }
     ]

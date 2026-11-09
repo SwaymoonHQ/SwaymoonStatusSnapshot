@@ -1,20 +1,20 @@
 {
-  "overall": "major_outage",
-  "probedAt": 1794233399233,
+  "overall": "operational",
+  "probedAt": 1794233704593,
   "edge": "hangzhou",
   "components": [
     {
       "id": "passport",
       "group": "products",
       "nameKey": "component.passport",
-      "status": "major_outage",
+      "status": "operational",
       "message": "",
       "origin": {
         "ok": true,
-        "latencyMs": 3783,
+        "latencyMs": 3264,
         "reason": "Origin server (Jiangsu) reachable",
         "edge": "hangzhou",
-        "probedAt": 1794233399152
+        "probedAt": 1794233704593
       }
     },
     {
@@ -25,10 +25,10 @@
       "message": "",
       "origin": {
         "ok": true,
-        "latencyMs": 1463,
+        "latencyMs": 1207,
         "reason": "Origin server (Jiangsu) reachable",
         "edge": "hangzhou",
-        "probedAt": 1794233396832
+        "probedAt": 1794233702537
       }
     },
     {
@@ -39,10 +39,10 @@
       "message": "",
       "origin": {
         "ok": true,
-        "latencyMs": 1625,
+        "latencyMs": 1464,
         "reason": "Origin server (Jiangsu) reachable",
         "edge": "hangzhou",
-        "probedAt": 1794233396996
+        "probedAt": 1794233702794
       }
     },
     {
@@ -52,25 +52,25 @@
       "status": "operational",
       "message": "",
       "origin": {
-        "ok": false,
-        "latencyMs": null,
-        "reason": "Origin server (Jiangsu) unreachable",
+        "ok": true,
+        "latencyMs": 1205,
+        "reason": "Origin server (Jiangsu) reachable",
         "edge": "hangzhou",
-        "probedAt": 1794233399233
+        "probedAt": 1794233702537
       }
     },
     {
       "id": "sitemap",
       "group": "products",
       "nameKey": "component.sitemap",
-      "status": "major_outage",
+      "status": "operational",
       "message": "",
       "origin": {
         "ok": true,
-        "latencyMs": 2533,
+        "latencyMs": 1462,
         "reason": "Origin server (Jiangsu) reachable",
         "edge": "hangzhou",
-        "probedAt": 1794233397906
+        "probedAt": 1794233702793
       }
     },
     {
@@ -81,10 +81,10 @@
       "message": "",
       "origin": {
         "ok": true,
-        "latencyMs": 2715,
+        "latencyMs": 3258,
         "reason": "Origin server (Jiangsu) reachable",
         "edge": "hangzhou",
-        "probedAt": 1794233398088
+        "probedAt": 1794233704590
       }
     },
     {
@@ -95,58 +95,13 @@
       "message": "",
       "origin": {
         "ok": true,
-        "latencyMs": 2533,
+        "latencyMs": 1705,
         "reason": "Origin server (Jiangsu) reachable",
         "edge": "hangzhou",
-        "probedAt": 1794233397906
+        "probedAt": 1794233703037
       }
     }
   ],
-  "incidents": [
-    {
-      "id": "246fdb10-f20e-43ff-949d-499b8b87cd20",
-      "title": "通行账户不可用",
-      "severity": "major",
-      "status": "investigating",
-      "impactComponents": [
-        "passport"
-      ],
-      "createdAt": 1794233191302,
-      "updatedAt": 1794233191302,
-      "resolvedAt": null,
-      "createdBy": "probe",
-      "updates": [
-        {
-          "id": "288f2366-5697-4767-80d0-e2430e79d558",
-          "status": "investigating",
-          "body": "探针自动检测（连续不可达超过一分钟）：Origin server (Jiangsu) unreachable",
-          "createdAt": 1794233191302,
-          "createdBy": "probe"
-        }
-      ]
-    },
-    {
-      "id": "ca650f48-d109-4c1b-9ecf-09d02001915e",
-      "title": "网页地图不可用",
-      "severity": "major",
-      "status": "investigating",
-      "impactComponents": [
-        "sitemap"
-      ],
-      "createdAt": 1794233191302,
-      "updatedAt": 1794233191302,
-      "resolvedAt": null,
-      "createdBy": "probe",
-      "updates": [
-        {
-          "id": "d86b3652-4f63-4c98-b8a8-775bd92d0dbd",
-          "status": "investigating",
-          "body": "探针自动检测（连续不可达超过一分钟）：Origin server (Jiangsu) unreachable",
-          "createdAt": 1794233191302,
-          "createdBy": "probe"
-        }
-      ]
-    }
-  ],
+  "incidents": [],
   "maintenances": []
 }
