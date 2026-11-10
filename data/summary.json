@@ -1,6 +1,6 @@
 {
   "overall": "operational",
-  "probedAt": 1794270303908,
+  "probedAt": 1794270600614,
   "edge": "hangzhou",
   "components": [
     {
@@ -11,10 +11,10 @@
       "message": "",
       "origin": {
         "ok": true,
-        "latencyMs": 1239,
+        "latencyMs": 1491,
         "reason": "Origin server (Jiangsu) reachable",
         "edge": "hangzhou",
-        "probedAt": 1794270303908
+        "probedAt": 1794270598760
       }
     },
     {
@@ -24,11 +24,11 @@
       "status": "operational",
       "message": "",
       "origin": {
-        "ok": true,
-        "latencyMs": 1095,
-        "reason": "Origin server (Jiangsu) reachable",
+        "ok": false,
+        "latencyMs": null,
+        "reason": "Origin server (Jiangsu) unreachable",
         "edge": "hangzhou",
-        "probedAt": 1794270303765
+        "probedAt": 1794270600614
       }
     },
     {
@@ -39,10 +39,10 @@
       "message": "",
       "origin": {
         "ok": true,
-        "latencyMs": 1092,
+        "latencyMs": 1058,
         "reason": "Origin server (Jiangsu) reachable",
         "edge": "hangzhou",
-        "probedAt": 1794270303762
+        "probedAt": 1794270598327
       }
     },
     {
@@ -53,10 +53,10 @@
       "message": "",
       "origin": {
         "ok": true,
-        "latencyMs": 1094,
+        "latencyMs": 613,
         "reason": "Origin server (Jiangsu) reachable",
         "edge": "hangzhou",
-        "probedAt": 1794270303765
+        "probedAt": 1794270597883
       }
     },
     {
@@ -67,10 +67,10 @@
       "message": "",
       "origin": {
         "ok": true,
-        "latencyMs": 664,
+        "latencyMs": 1056,
         "reason": "Origin server (Jiangsu) reachable",
         "edge": "hangzhou",
-        "probedAt": 1794270303336
+        "probedAt": 1794270598326
       }
     },
     {
@@ -81,10 +81,10 @@
       "message": "",
       "origin": {
         "ok": true,
-        "latencyMs": 619,
+        "latencyMs": 611,
         "reason": "Origin server (Jiangsu) reachable",
         "edge": "hangzhou",
-        "probedAt": 1794270303292
+        "probedAt": 1794270597884
       }
     },
     {
@@ -95,10 +95,10 @@
       "message": "",
       "origin": {
         "ok": true,
-        "latencyMs": 616,
+        "latencyMs": 1053,
         "reason": "Origin server (Jiangsu) reachable",
         "edge": "hangzhou",
-        "probedAt": 1794270303291
+        "probedAt": 1794270598324
       }
     }
   ],
