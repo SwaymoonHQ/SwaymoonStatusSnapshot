@@ -4,13 +4,13 @@
       "id": "5d2912d0-52d7-458a-be68-256111709fb8",
       "title": "通行账户不可用",
       "severity": "major",
-      "status": "investigating",
+      "status": "resolved",
       "impactComponents": [
         "passport"
       ],
       "createdAt": 1794361188772,
-      "updatedAt": 1794361188772,
-      "resolvedAt": null,
+      "updatedAt": 1794474799890,
+      "resolvedAt": 1794474799890,
       "createdBy": "probe",
       "updates": [
         {
@@ -19,6 +19,13 @@
           "body": "探针自动检测（连续不可达超过一分钟）：Origin server (Jiangsu) unreachable",
           "createdAt": 1794361188772,
           "createdBy": "probe"
+        },
+        {
+          "id": "3207c739-3ec5-4ed7-823d-dd1f446fbed4",
+          "status": "resolved",
+          "body": "探针恢复：服务已连续可达超过一分钟。",
+          "createdAt": 1794474799890,
+          "createdBy": "probe"
         }
       ]
     },
@@ -26,13 +33,13 @@
       "id": "3ec03758-87de-4ee6-a1d2-52f91848bce2",
       "title": "开发者门户不可用",
       "severity": "major",
-      "status": "investigating",
+      "status": "resolved",
       "impactComponents": [
         "develop"
       ],
       "createdAt": 1794361188772,
-      "updatedAt": 1794361188772,
-      "resolvedAt": null,
+      "updatedAt": 1794474799890,
+      "resolvedAt": 1794474799890,
       "createdBy": "probe",
       "updates": [
         {
@@ -41,6 +48,13 @@
           "body": "探针自动检测（连续不可达超过一分钟）：Origin server (Jiangsu) unreachable",
           "createdAt": 1794361188772,
           "createdBy": "probe"
+        },
+        {
+          "id": "38116f3f-92ce-48ef-8aea-d992d6d8b837",
+          "status": "resolved",
+          "body": "探针恢复：服务已连续可达超过一分钟。",
+          "createdAt": 1794474799890,
+          "createdBy": "probe"
         }
       ]
     },
@@ -48,13 +62,13 @@
       "id": "06c07770-5757-40de-89db-63e9f197c848",
       "title": "文档中心不可用",
       "severity": "major",
-      "status": "investigating",
+      "status": "resolved",
       "impactComponents": [
         "docs"
       ],
       "createdAt": 1794361188772,
-      "updatedAt": 1794361188772,
-      "resolvedAt": null,
+      "updatedAt": 1794474799890,
+      "resolvedAt": 1794474799890,
       "createdBy": "probe",
       "updates": [
         {
@@ -63,6 +77,13 @@
           "body": "探针自动检测（连续不可达超过一分钟）：Origin server (Jiangsu) unreachable",
           "createdAt": 1794361188772,
           "createdBy": "probe"
+        },
+        {
+          "id": "eb143ba9-954f-4c7a-8c35-f8eb3c8c38f0",
+          "status": "resolved",
+          "body": "探针恢复：服务已连续可达超过一分钟。",
+          "createdAt": 1794474799890,
+          "createdBy": "probe"
         }
       ]
     },
@@ -70,13 +91,13 @@
       "id": "576d312f-a367-42c4-a5ce-40a4a0ac904a",
       "title": "报告问题门户不可用",
       "severity": "major",
-      "status": "investigating",
+      "status": "resolved",
       "impactComponents": [
         "reportaproblem"
       ],
       "createdAt": 1794361188772,
-      "updatedAt": 1794361188772,
-      "resolvedAt": null,
+      "updatedAt": 1794474799890,
+      "resolvedAt": 1794474799890,
       "createdBy": "probe",
       "updates": [
         {
@@ -85,6 +106,13 @@
           "body": "探针自动检测（连续不可达超过一分钟）：Origin server (Jiangsu) unreachable",
           "createdAt": 1794361188772,
           "createdBy": "probe"
+        },
+        {
+          "id": "badc638c-b99e-4c95-992f-18ce31d0bb7a",
+          "status": "resolved",
+          "body": "探针恢复：服务已连续可达超过一分钟。",
+          "createdAt": 1794474799890,
+          "createdBy": "probe"
         }
       ]
     },
@@ -92,13 +120,13 @@
       "id": "89c86e34-5293-4986-8096-72c7608354ec",
       "title": "网页地图不可用",
       "severity": "major",
-      "status": "investigating",
+      "status": "resolved",
       "impactComponents": [
         "sitemap"
       ],
       "createdAt": 1794361188772,
-      "updatedAt": 1794361188772,
-      "resolvedAt": null,
+      "updatedAt": 1794474799890,
+      "resolvedAt": 1794474799890,
       "createdBy": "probe",
       "updates": [
         {
@@ -107,6 +135,13 @@
           "body": "探针自动检测（连续不可达超过一分钟）：Origin server (Jiangsu) unreachable",
           "createdAt": 1794361188772,
           "createdBy": "probe"
+        },
+        {
+          "id": "a43b7b0a-4c65-460b-a28d-222bf9aa6a45",
+          "status": "resolved",
+          "body": "探针恢复：服务已连续可达超过一分钟。",
+          "createdAt": 1794474799890,
+          "createdBy": "probe"
         }
       ]
     },
@@ -114,13 +149,13 @@
       "id": "b6ed994c-3f04-43f9-ad49-f70830edea72",
       "title": "管理台不可用",
       "severity": "major",
-      "status": "investigating",
+      "status": "resolved",
       "impactComponents": [
         "admin"
       ],
       "createdAt": 1794361188772,
-      "updatedAt": 1794361188772,
-      "resolvedAt": null,
+      "updatedAt": 1794474799890,
+      "resolvedAt": 1794474799890,
       "createdBy": "probe",
       "updates": [
         {
@@ -129,6 +164,13 @@
           "body": "探针自动检测（连续不可达超过一分钟）：Origin server (Jiangsu) unreachable",
           "createdAt": 1794361188772,
           "createdBy": "probe"
+        },
+        {
+          "id": "88a01031-0a71-4c96-b928-397951941059",
+          "status": "resolved",
+          "body": "探针恢复：服务已连续可达超过一分钟。",
+          "createdAt": 1794474799890,
+          "createdBy": "probe"
         }
       ]
     },
@@ -136,13 +178,13 @@
       "id": "778383c3-2ef4-45e3-8a22-174f41f795db",
       "title": "问卷不可用",
       "severity": "major",
-      "status": "investigating",
+      "status": "resolved",
       "impactComponents": [
         "survey"
       ],
       "createdAt": 1794361188772,
-      "updatedAt": 1794361188772,
-      "resolvedAt": null,
+      "updatedAt": 1794474799890,
+      "resolvedAt": 1794474799890,
       "createdBy": "probe",
       "updates": [
         {
@@ -150,6 +192,13 @@
           "status": "investigating",
           "body": "探针自动检测（连续不可达超过一分钟）：Origin server (Jiangsu) unreachable",
           "createdAt": 1794361188772,
+          "createdBy": "probe"
+        },
+        {
+          "id": "d8e59d94-9515-46b3-83a6-b0eed297ea3f",
+          "status": "resolved",
+          "body": "探针恢复：服务已连续可达超过一分钟。",
+          "createdAt": 1794474799890,
           "createdBy": "probe"
         }
       ]
