@@ -1,6 +1,6 @@
 {
   "overall": "major_outage",
-  "probedAt": 1794647102765,
+  "probedAt": 1794647402661,
   "edge": "hangzhou",
   "components": [
     {
@@ -10,11 +10,11 @@
       "status": "major_outage",
       "message": "",
       "origin": {
-        "ok": false,
-        "latencyMs": null,
-        "reason": "Origin server (Jiangsu) unreachable",
+        "ok": true,
+        "latencyMs": 98,
+        "reason": "Origin server (Jiangsu) reachable",
         "edge": "hangzhou",
-        "probedAt": 1794647102765
+        "probedAt": 1794647402661
       }
     },
     {
@@ -24,11 +24,11 @@
       "status": "major_outage",
       "message": "",
       "origin": {
-        "ok": false,
-        "latencyMs": null,
-        "reason": "Origin server (Jiangsu) unreachable",
+        "ok": true,
+        "latencyMs": 45,
+        "reason": "Origin server (Jiangsu) reachable",
         "edge": "hangzhou",
-        "probedAt": 1794647102765
+        "probedAt": 1794647402610
       }
     },
     {
@@ -38,11 +38,11 @@
       "status": "major_outage",
       "message": "",
       "origin": {
-        "ok": false,
-        "latencyMs": null,
-        "reason": "Origin server (Jiangsu) unreachable",
+        "ok": true,
+        "latencyMs": 49,
+        "reason": "Origin server (Jiangsu) reachable",
         "edge": "hangzhou",
-        "probedAt": 1794647102764
+        "probedAt": 1794647402612
       }
     },
     {
@@ -52,11 +52,11 @@
       "status": "major_outage",
       "message": "",
       "origin": {
-        "ok": false,
-        "latencyMs": null,
-        "reason": "Origin server (Jiangsu) unreachable",
+        "ok": true,
+        "latencyMs": 49,
+        "reason": "Origin server (Jiangsu) reachable",
         "edge": "hangzhou",
-        "probedAt": 1794647102765
+        "probedAt": 1794647402613
       }
     },
     {
@@ -66,11 +66,11 @@
       "status": "major_outage",
       "message": "",
       "origin": {
-        "ok": false,
-        "latencyMs": null,
-        "reason": "Origin server (Jiangsu) unreachable",
+        "ok": true,
+        "latencyMs": 48,
+        "reason": "Origin server (Jiangsu) reachable",
         "edge": "hangzhou",
-        "probedAt": 1794647102764
+        "probedAt": 1794647402613
       }
     },
     {
@@ -80,11 +80,11 @@
       "status": "major_outage",
       "message": "",
       "origin": {
-        "ok": false,
-        "latencyMs": null,
-        "reason": "Origin server (Jiangsu) unreachable",
+        "ok": true,
+        "latencyMs": 47,
+        "reason": "Origin server (Jiangsu) reachable",
         "edge": "hangzhou",
-        "probedAt": 1794647102765
+        "probedAt": 1794647402612
       }
     },
     {
@@ -94,11 +94,11 @@
       "status": "major_outage",
       "message": "",
       "origin": {
-        "ok": false,
-        "latencyMs": null,
-        "reason": "Origin server (Jiangsu) unreachable",
+        "ok": true,
+        "latencyMs": 46,
+        "reason": "Origin server (Jiangsu) reachable",
         "edge": "hangzhou",
-        "probedAt": 1794647102764
+        "probedAt": 1794647402613
       }
     }
   ],
