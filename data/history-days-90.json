@@ -1,13 +1,6 @@
 {
   "days": [
     {
-      "date": "2026-08-20",
-      "startAt": 1787155200000,
-      "endAt": 1787241600000,
-      "level": "ok",
-      "incidents": []
-    },
-    {
       "date": "2026-08-21",
       "startAt": 1787241600000,
       "endAt": 1787328000000,
@@ -3204,6 +3197,59 @@
       "date": "2026-11-17",
       "startAt": 1794844800000,
       "endAt": 1794931200000,
+      "level": "major",
+      "incidents": [
+        {
+          "id": "3dadac7c-b4b9-4943-beb8-38dd47c6a236",
+          "title": "边缘节点（杭州）宕机事故",
+          "severity": "major"
+        },
+        {
+          "id": "97d0aa74-65cc-4af3-a5ac-e224676a8938",
+          "title": "边缘节点（杭州）宕机事故",
+          "severity": "major"
+        },
+        {
+          "id": "d9edf94f-d1ac-4538-a875-839b3b08d2b9",
+          "title": "通行账户不可用",
+          "severity": "major"
+        },
+        {
+          "id": "d2a6e8ee-c1de-4e19-9aef-037a552e37ad",
+          "title": "开发者门户不可用",
+          "severity": "major"
+        },
+        {
+          "id": "b7cca0e1-2942-4a1e-8334-33bf0840b64b",
+          "title": "文档中心不可用",
+          "severity": "major"
+        },
+        {
+          "id": "8c5b0395-2507-43e5-b8cc-7864e96da70a",
+          "title": "报告问题门户不可用",
+          "severity": "major"
+        },
+        {
+          "id": "98ae1fbd-1113-49b2-b861-276ba3417664",
+          "title": "网页地图不可用",
+          "severity": "major"
+        },
+        {
+          "id": "2782f8b1-934d-4629-b108-42bc35c55b75",
+          "title": "管理台不可用",
+          "severity": "major"
+        },
+        {
+          "id": "dc246797-b137-4e63-9eff-46177b835f71",
+          "title": "问卷不可用",
+          "severity": "major"
+        }
+      ]
+    },
+    {
+      "date": "2026-11-18",
+      "startAt": 1794931200000,
+      "endAt": 1795017600000,
       "level": "major",
       "incidents": [
         {
