@@ -1,262 +1,107 @@
 {
-  "overall": "major_outage",
-  "probedAt": 1794984002666,
+  "overall": "operational",
+  "probedAt": 1794984301632,
   "edge": "hangzhou",
   "components": [
     {
       "id": "passport",
       "group": "products",
       "nameKey": "component.passport",
-      "status": "major_outage",
+      "status": "operational",
       "message": "",
       "origin": {
-        "ok": false,
-        "latencyMs": null,
-        "reason": "Origin server (Jiangsu) unreachable",
+        "ok": true,
+        "latencyMs": 98,
+        "reason": "Origin server (Jiangsu) reachable",
         "edge": "hangzhou",
-        "probedAt": 1794984002666
+        "probedAt": 1794984301632
       }
     },
     {
       "id": "develop",
       "group": "products",
       "nameKey": "component.develop",
-      "status": "major_outage",
+      "status": "operational",
       "message": "",
       "origin": {
-        "ok": false,
-        "latencyMs": null,
-        "reason": "Origin server (Jiangsu) unreachable",
+        "ok": true,
+        "latencyMs": 44,
+        "reason": "Origin server (Jiangsu) reachable",
         "edge": "hangzhou",
-        "probedAt": 1794984002666
+        "probedAt": 1794984301579
       }
     },
     {
       "id": "docs",
       "group": "products",
       "nameKey": "component.docs",
-      "status": "major_outage",
+      "status": "operational",
       "message": "",
       "origin": {
-        "ok": false,
-        "latencyMs": null,
-        "reason": "Origin server (Jiangsu) unreachable",
+        "ok": true,
+        "latencyMs": 44,
+        "reason": "Origin server (Jiangsu) reachable",
         "edge": "hangzhou",
-        "probedAt": 1794984002666
+        "probedAt": 1794984301579
       }
     },
     {
       "id": "reportaproblem",
       "group": "products",
       "nameKey": "component.reportaproblem",
-      "status": "major_outage",
+      "status": "operational",
       "message": "",
       "origin": {
-        "ok": false,
-        "latencyMs": null,
-        "reason": "Origin server (Jiangsu) unreachable",
+        "ok": true,
+        "latencyMs": 44,
+        "reason": "Origin server (Jiangsu) reachable",
         "edge": "hangzhou",
-        "probedAt": 1794984002666
+        "probedAt": 1794984301579
       }
     },
     {
       "id": "sitemap",
       "group": "products",
       "nameKey": "component.sitemap",
-      "status": "major_outage",
+      "status": "operational",
       "message": "",
       "origin": {
-        "ok": false,
-        "latencyMs": null,
-        "reason": "Origin server (Jiangsu) unreachable",
+        "ok": true,
+        "latencyMs": 45,
+        "reason": "Origin server (Jiangsu) reachable",
         "edge": "hangzhou",
-        "probedAt": 1794984002666
+        "probedAt": 1794984301580
       }
     },
     {
       "id": "admin",
       "group": "products",
       "nameKey": "component.admin",
-      "status": "major_outage",
+      "status": "operational",
       "message": "",
       "origin": {
-        "ok": false,
-        "latencyMs": null,
-        "reason": "Origin server (Jiangsu) unreachable",
+        "ok": true,
+        "latencyMs": 45,
+        "reason": "Origin server (Jiangsu) reachable",
         "edge": "hangzhou",
-        "probedAt": 1794984002666
+        "probedAt": 1794984301582
       }
     },
     {
       "id": "survey",
       "group": "products",
       "nameKey": "component.survey",
-      "status": "major_outage",
+      "status": "operational",
       "message": "",
       "origin": {
-        "ok": false,
-        "latencyMs": null,
-        "reason": "Origin server (Jiangsu) unreachable",
+        "ok": true,
+        "latencyMs": 44,
+        "reason": "Origin server (Jiangsu) reachable",
         "edge": "hangzhou",
-        "probedAt": 1794984002666
+        "probedAt": 1794984301580
       }
     }
   ],
-  "incidents": [
-    {
-      "id": "1c6c2c60-9a66-4476-9b5b-968714a2512a",
-      "title": "通行账户不可用",
-      "severity": "major",
-      "status": "investigating",
-      "impactComponents": [
-        "passport"
-      ],
-      "createdAt": 1794982036947,
-      "updatedAt": 1794982036947,
-      "resolvedAt": null,
-      "createdBy": "probe",
-      "updates": [
-        {
-          "id": "8e25a3ca-71e2-48ce-a10a-ef8c1c7b40b1",
-          "status": "investigating",
-          "body": "探针自动检测（连续不可达超过一分钟）：Origin server (Jiangsu) unreachable",
-          "createdAt": 1794982036947,
-          "createdBy": "probe"
-        }
-      ]
-    },
-    {
-      "id": "47b54845-1553-40a7-baf7-6656d5c2ecb3",
-      "title": "开发者门户不可用",
-      "severity": "major",
-      "status": "investigating",
-      "impactComponents": [
-        "develop"
-      ],
-      "createdAt": 1794982036947,
-      "updatedAt": 1794982036947,
-      "resolvedAt": null,
-      "createdBy": "probe",
-      "updates": [
-        {
-          "id": "a3b60e20-4462-4ad1-9be7-7dc77ed9c97a",
-          "status": "investigating",
-          "body": "探针自动检测（连续不可达超过一分钟）：Origin server (Jiangsu) unreachable",
-          "createdAt": 1794982036947,
-          "createdBy": "probe"
-        }
-      ]
-    },
-    {
-      "id": "9e3f57ce-43db-459f-865d-89a695bd8717",
-      "title": "文档中心不可用",
-      "severity": "major",
-      "status": "investigating",
-      "impactComponents": [
-        "docs"
-      ],
-      "createdAt": 1794982036947,
-      "updatedAt": 1794982036947,
-      "resolvedAt": null,
-      "createdBy": "probe",
-      "updates": [
-        {
-          "id": "74ff196e-0de0-4bef-800c-015a435a0c8a",
-          "status": "investigating",
-          "body": "探针自动检测（连续不可达超过一分钟）：Origin server (Jiangsu) unreachable",
-          "createdAt": 1794982036947,
-          "createdBy": "probe"
-        }
-      ]
-    },
-    {
-      "id": "a5ee7ff8-9ebd-4480-ada5-ff5de09685d4",
-      "title": "报告问题门户不可用",
-      "severity": "major",
-      "status": "investigating",
-      "impactComponents": [
-        "reportaproblem"
-      ],
-      "createdAt": 1794982036947,
-      "updatedAt": 1794982036947,
-      "resolvedAt": null,
-      "createdBy": "probe",
-      "updates": [
-        {
-          "id": "ee109ac5-c262-4975-b8cc-ad85e40e5f20",
-          "status": "investigating",
-          "body": "探针自动检测（连续不可达超过一分钟）：Origin server (Jiangsu) unreachable",
-          "createdAt": 1794982036947,
-          "createdBy": "probe"
-        }
-      ]
-    },
-    {
-      "id": "495939e0-3ff1-461a-b5c6-affd49807ed8",
-      "title": "网页地图不可用",
-      "severity": "major",
-      "status": "investigating",
-      "impactComponents": [
-        "sitemap"
-      ],
-      "createdAt": 1794982036947,
-      "updatedAt": 1794982036947,
-      "resolvedAt": null,
-      "createdBy": "probe",
-      "updates": [
-        {
-          "id": "e1a6b8e9-e328-41a5-8875-4ae7de92f623",
-          "status": "investigating",
-          "body": "探针自动检测（连续不可达超过一分钟）：Origin server (Jiangsu) unreachable",
-          "createdAt": 1794982036947,
-          "createdBy": "probe"
-        }
-      ]
-    },
-    {
-      "id": "240c7016-83a0-4e99-ae8c-8af46d2bbe7d",
-      "title": "管理台不可用",
-      "severity": "major",
-      "status": "investigating",
-      "impactComponents": [
-        "admin"
-      ],
-      "createdAt": 1794982036947,
-      "updatedAt": 1794982036947,
-      "resolvedAt": null,
-      "createdBy": "probe",
-      "updates": [
-        {
-          "id": "4c93b21e-8436-4366-a9f4-0212e1cac62e",
-          "status": "investigating",
-          "body": "探针自动检测（连续不可达超过一分钟）：Origin server (Jiangsu) unreachable",
-          "createdAt": 1794982036947,
-          "createdBy": "probe"
-        }
-      ]
-    },
-    {
-      "id": "30607198-381b-446b-93c2-7853f2c3e2c6",
-      "title": "问卷不可用",
-      "severity": "major",
-      "status": "investigating",
-      "impactComponents": [
-        "survey"
-      ],
-      "createdAt": 1794982036947,
-      "updatedAt": 1794982036947,
-      "resolvedAt": null,
-      "createdBy": "probe",
-      "updates": [
-        {
-          "id": "714fa15e-0125-41c4-b028-b2e2778ff2c1",
-          "status": "investigating",
-          "body": "探针自动检测（连续不可达超过一分钟）：Origin server (Jiangsu) unreachable",
-          "createdAt": 1794982036947,
-          "createdBy": "probe"
-        }
-      ]
-    }
-  ],
+  "incidents": [],
   "maintenances": []
 }
