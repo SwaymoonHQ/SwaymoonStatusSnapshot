@@ -1,262 +1,107 @@
 {
-  "overall": "major_outage",
-  "probedAt": 1795092301854,
+  "overall": "operational",
+  "probedAt": 1795092598782,
   "edge": "hangzhou",
   "components": [
     {
       "id": "passport",
       "group": "products",
       "nameKey": "component.passport",
-      "status": "major_outage",
+      "status": "operational",
       "message": "",
       "origin": {
         "ok": true,
-        "latencyMs": 81,
+        "latencyMs": 82,
         "reason": "Origin server (Jiangsu) reachable",
         "edge": "hangzhou",
-        "probedAt": 1795092301854
+        "probedAt": 1795092598782
       }
     },
     {
       "id": "develop",
       "group": "products",
       "nameKey": "component.develop",
-      "status": "major_outage",
-      "message": "",
-      "origin": {
-        "ok": true,
-        "latencyMs": 37,
-        "reason": "Origin server (Jiangsu) reachable",
-        "edge": "hangzhou",
-        "probedAt": 1795092301810
-      }
-    },
-    {
-      "id": "docs",
-      "group": "products",
-      "nameKey": "component.docs",
-      "status": "major_outage",
-      "message": "",
-      "origin": {
-        "ok": true,
-        "latencyMs": 37,
-        "reason": "Origin server (Jiangsu) reachable",
-        "edge": "hangzhou",
-        "probedAt": 1795092301810
-      }
-    },
-    {
-      "id": "reportaproblem",
-      "group": "products",
-      "nameKey": "component.reportaproblem",
-      "status": "major_outage",
+      "status": "operational",
       "message": "",
       "origin": {
         "ok": true,
         "latencyMs": 36,
         "reason": "Origin server (Jiangsu) reachable",
         "edge": "hangzhou",
-        "probedAt": 1795092301811
+        "probedAt": 1795092598737
+      }
+    },
+    {
+      "id": "docs",
+      "group": "products",
+      "nameKey": "component.docs",
+      "status": "operational",
+      "message": "",
+      "origin": {
+        "ok": true,
+        "latencyMs": 36,
+        "reason": "Origin server (Jiangsu) reachable",
+        "edge": "hangzhou",
+        "probedAt": 1795092598738
+      }
+    },
+    {
+      "id": "reportaproblem",
+      "group": "products",
+      "nameKey": "component.reportaproblem",
+      "status": "operational",
+      "message": "",
+      "origin": {
+        "ok": true,
+        "latencyMs": 37,
+        "reason": "Origin server (Jiangsu) reachable",
+        "edge": "hangzhou",
+        "probedAt": 1795092598739
       }
     },
     {
       "id": "sitemap",
       "group": "products",
       "nameKey": "component.sitemap",
-      "status": "major_outage",
+      "status": "operational",
       "message": "",
       "origin": {
         "ok": true,
-        "latencyMs": 37,
+        "latencyMs": 36,
         "reason": "Origin server (Jiangsu) reachable",
         "edge": "hangzhou",
-        "probedAt": 1795092301811
+        "probedAt": 1795092598738
       }
     },
     {
       "id": "admin",
       "group": "products",
       "nameKey": "component.admin",
-      "status": "major_outage",
+      "status": "operational",
       "message": "",
       "origin": {
         "ok": true,
-        "latencyMs": 37,
+        "latencyMs": 35,
         "reason": "Origin server (Jiangsu) reachable",
         "edge": "hangzhou",
-        "probedAt": 1795092301811
+        "probedAt": 1795092598738
       }
     },
     {
       "id": "survey",
       "group": "products",
       "nameKey": "component.survey",
-      "status": "major_outage",
+      "status": "operational",
       "message": "",
       "origin": {
         "ok": true,
-        "latencyMs": 37,
+        "latencyMs": 36,
         "reason": "Origin server (Jiangsu) reachable",
         "edge": "hangzhou",
-        "probedAt": 1795092301812
+        "probedAt": 1795092598739
       }
     }
   ],
-  "incidents": [
-    {
-      "id": "54ce1325-0bdd-4379-8a35-8859152078e2",
-      "title": "通行账户不可用",
-      "severity": "major",
-      "status": "investigating",
-      "impactComponents": [
-        "passport"
-      ],
-      "createdAt": 1795091546554,
-      "updatedAt": 1795091546554,
-      "resolvedAt": null,
-      "createdBy": "probe",
-      "updates": [
-        {
-          "id": "96aacabb-f3a4-4eec-a240-b6c1dd70aff4",
-          "status": "investigating",
-          "body": "探针自动检测（连续不可达超过一分钟）：Origin server (Jiangsu) unreachable",
-          "createdAt": 1795091546554,
-          "createdBy": "probe"
-        }
-      ]
-    },
-    {
-      "id": "6cfce6db-cafe-4904-a750-9fe06a432673",
-      "title": "开发者门户不可用",
-      "severity": "major",
-      "status": "investigating",
-      "impactComponents": [
-        "develop"
-      ],
-      "createdAt": 1795091546554,
-      "updatedAt": 1795091546554,
-      "resolvedAt": null,
-      "createdBy": "probe",
-      "updates": [
-        {
-          "id": "e1446b31-ba17-4baf-a5af-ef036712ef24",
-          "status": "investigating",
-          "body": "探针自动检测（连续不可达超过一分钟）：Origin server (Jiangsu) unreachable",
-          "createdAt": 1795091546554,
-          "createdBy": "probe"
-        }
-      ]
-    },
-    {
-      "id": "12165388-5ae5-4d34-839d-9bee1ce5bfe2",
-      "title": "文档中心不可用",
-      "severity": "major",
-      "status": "investigating",
-      "impactComponents": [
-        "docs"
-      ],
-      "createdAt": 1795091546554,
-      "updatedAt": 1795091546554,
-      "resolvedAt": null,
-      "createdBy": "probe",
-      "updates": [
-        {
-          "id": "a4cb84c5-ef40-4c33-8e3a-0e8fc394396b",
-          "status": "investigating",
-          "body": "探针自动检测（连续不可达超过一分钟）：Origin server (Jiangsu) unreachable",
-          "createdAt": 1795091546554,
-          "createdBy": "probe"
-        }
-      ]
-    },
-    {
-      "id": "e03adb4b-13d5-4cd8-9440-7210a7240d3e",
-      "title": "报告问题门户不可用",
-      "severity": "major",
-      "status": "investigating",
-      "impactComponents": [
-        "reportaproblem"
-      ],
-      "createdAt": 1795091546554,
-      "updatedAt": 1795091546554,
-      "resolvedAt": null,
-      "createdBy": "probe",
-      "updates": [
-        {
-          "id": "42b8bba0-b451-44fb-a1e6-853d16343807",
-          "status": "investigating",
-          "body": "探针自动检测（连续不可达超过一分钟）：Origin server (Jiangsu) unreachable",
-          "createdAt": 1795091546554,
-          "createdBy": "probe"
-        }
-      ]
-    },
-    {
-      "id": "be01d12d-2dcb-414d-a2ba-471fa1c549f2",
-      "title": "网页地图不可用",
-      "severity": "major",
-      "status": "investigating",
-      "impactComponents": [
-        "sitemap"
-      ],
-      "createdAt": 1795091546554,
-      "updatedAt": 1795091546554,
-      "resolvedAt": null,
-      "createdBy": "probe",
-      "updates": [
-        {
-          "id": "d86e4e30-15e0-48f1-9f7c-fdb1e5376330",
-          "status": "investigating",
-          "body": "探针自动检测（连续不可达超过一分钟）：Origin server (Jiangsu) unreachable",
-          "createdAt": 1795091546554,
-          "createdBy": "probe"
-        }
-      ]
-    },
-    {
-      "id": "5975e896-1545-4b5d-9b09-5cbe8a341b5c",
-      "title": "管理台不可用",
-      "severity": "major",
-      "status": "investigating",
-      "impactComponents": [
-        "admin"
-      ],
-      "createdAt": 1795091546554,
-      "updatedAt": 1795091546554,
-      "resolvedAt": null,
-      "createdBy": "probe",
-      "updates": [
-        {
-          "id": "db75298a-ae43-4589-894e-020cddbc82db",
-          "status": "investigating",
-          "body": "探针自动检测（连续不可达超过一分钟）：Origin server (Jiangsu) unreachable",
-          "createdAt": 1795091546554,
-          "createdBy": "probe"
-        }
-      ]
-    },
-    {
-      "id": "5cc64cf9-cc69-477f-817f-334cf5fd2d59",
-      "title": "问卷不可用",
-      "severity": "major",
-      "status": "investigating",
-      "impactComponents": [
-        "survey"
-      ],
-      "createdAt": 1795091546554,
-      "updatedAt": 1795091546554,
-      "resolvedAt": null,
-      "createdBy": "probe",
-      "updates": [
-        {
-          "id": "10815239-90d0-49ff-a448-a535af998cab",
-          "status": "investigating",
-          "body": "探针自动检测（连续不可达超过一分钟）：Origin server (Jiangsu) unreachable",
-          "createdAt": 1795091546554,
-          "createdBy": "probe"
-        }
-      ]
-    }
-  ],
+  "incidents": [],
   "maintenances": []
 }
