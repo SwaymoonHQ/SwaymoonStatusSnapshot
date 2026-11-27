@@ -1,29 +1,6 @@
 {
   "days": [
     {
-      "date": "2026-08-30",
-      "startAt": 1788019200000,
-      "endAt": 1788105600000,
-      "level": "major",
-      "incidents": [
-        {
-          "id": "596b2639-a522-4d42-ae25-caec03756e38",
-          "title": "通行账户不可用",
-          "severity": "major"
-        },
-        {
-          "id": "6d2bcd14-5c5e-487e-94f5-f72463d8132d",
-          "title": "开发者门户不可用",
-          "severity": "major"
-        },
-        {
-          "id": "115e491c-ab16-4246-b7c8-d74c1c7bbd75",
-          "title": "报告问题门户不可用",
-          "severity": "major"
-        }
-      ]
-    },
-    {
       "date": "2026-08-31",
       "startAt": 1788105600000,
       "endAt": 1788192000000,
@@ -4612,6 +4589,59 @@
         {
           "id": "40651048-ad25-4d74-8f32-88d39e6a3d32",
           "title": "问卷不可用",
+          "severity": "major"
+        },
+        {
+          "id": "2917d9df-9fc5-4fb1-adaa-f064ffea309e",
+          "title": "通行账户不可用",
+          "severity": "major"
+        },
+        {
+          "id": "f2760b9f-baa8-4ba1-b9d5-c2ba888197e2",
+          "title": "开发者门户不可用",
+          "severity": "major"
+        },
+        {
+          "id": "deb59c25-5864-4923-8d87-4d47b720454c",
+          "title": "文档中心不可用",
+          "severity": "major"
+        },
+        {
+          "id": "8340d28f-1d67-4e00-9095-2a0c668c629f",
+          "title": "报告问题门户不可用",
+          "severity": "major"
+        },
+        {
+          "id": "cd0bd4ba-1a02-4ab0-a599-f5fc58daf167",
+          "title": "网页地图不可用",
+          "severity": "major"
+        },
+        {
+          "id": "ae2203cd-ae20-45d2-9caa-8f54a011cf3a",
+          "title": "管理台不可用",
+          "severity": "major"
+        },
+        {
+          "id": "25db0d04-09eb-4bc5-bf5b-81c4181faba3",
+          "title": "问卷不可用",
+          "severity": "major"
+        }
+      ]
+    },
+    {
+      "date": "2026-11-28",
+      "startAt": 1795795200000,
+      "endAt": 1795881600000,
+      "level": "major",
+      "incidents": [
+        {
+          "id": "3dadac7c-b4b9-4943-beb8-38dd47c6a236",
+          "title": "边缘节点（杭州）宕机事故",
+          "severity": "major"
+        },
+        {
+          "id": "97d0aa74-65cc-4af3-a5ac-e224676a8938",
+          "title": "边缘节点（杭州）宕机事故",
           "severity": "major"
         },
         {
